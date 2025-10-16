@@ -1,0 +1,10 @@
+torch
+dgl
+numpy
+pandas
+scikit-learn
+networkx
+matplotlib
+seaborn
+jupyter
+ipykernel
