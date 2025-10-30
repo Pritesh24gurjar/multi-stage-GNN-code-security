@@ -1,2 +1,5 @@
 dataset/
 _pycache_/
+IPAG-GIN-CFEExplainer/data/processed/
+IPAG-GIN-CFEExplainer/src/__pycache__/
+IPAG-GIN-CFEExplainer/src/graph/__pycache__/
