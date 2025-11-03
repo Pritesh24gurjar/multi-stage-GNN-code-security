@@ -1,28 +1,21 @@
 from setuptools import setup, Extension, find_packages
+import pybind11
 import sys
-
-# Ensure pybind11 is available before using it
-try:
-    import pybind11
-except ImportError:
-    from setuptools import dist
-    dist.Distribution().fetch_build_eggs(['pybind11'])
-    import pybind11
 
 # Platform-specific compilation flags
 if sys.platform == 'win32':
     extra_compile_args = ['/std:c++14', '/O2', '/openmp']
     extra_link_args = ['/openmp']
 elif sys.platform == 'darwin':
-    extra_compile_args = ['-std=c++14', '-O3']
+    extra_compile_args = ['-std=c++11', '-O3']
     extra_link_args = []
     print("Warning: OpenMP may not be available on macOS with default compiler")
 else:
-    extra_compile_args = ['-std=c++14', '-O3', '-fopenmp']
+    extra_compile_args = ['-std=c++11', '-O3', '-fopenmp']
     extra_link_args = ['-fopenmp']
 
 common_args = {
-    'include_dirs': [pybind11.get_include(), pybind11.get_include(user=True)],
+    'include_dirs': [pybind11.get_include()],
     'language': 'c++',
     'extra_compile_args': extra_compile_args,
     'extra_link_args': extra_link_args,
@@ -30,10 +23,8 @@ common_args = {
 
 ext_modules = [
     Extension(
-        # The importable module name — matches src/graph/__init__.py
-        'graph.graph_structure_features',
-        # Actual C++ source file
-        ['src/src/struct_features.cpp'],
+        'graph.graph_structure_features',  # Matches your compiled .so file
+        ['src/struct_features.cpp'],   # Actual source location
         **common_args
     ),
 ]
@@ -44,16 +35,17 @@ setup(
     description='IPAG Graph Isomorphism Network with Counterfactual Explainer',
     author='Satya',
     python_requires='>=3.7',
-    packages=find_packages(where='src'),
+    packages=find_packages(),
     package_dir={'': 'src'},
     install_requires=[
-        'numpy>=1.19.0',
-        'torch>=1.7.0',
-        'transformers>=4.0.0',
+        'numpy',
+        'torch',
+        'transformers',
         'pybind11',
-        'pandas>=1.0.0',
-        'scikit-learn>=0.24.0',
-        'networkx>=2.5',
+        'pandas',
+        'scikit-learn',
+        'networkx',
+        'typing_extentions',
     ],
     ext_modules=ext_modules,
     zip_safe=False,

@@ -2,10 +2,14 @@ torch
 dgl
 numpy
 pandas
+matplotlib
 scikit-learn
 networkx
 matplotlib
 seaborn
 jupyter
+jupyter-server
 ipykernel
 pyarrow
+transformers
+pybind11
