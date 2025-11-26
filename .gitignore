@@ -1,5 +1,11 @@
 dataset/
 _pycache_/
-IPAG-GIN-CFEExplainer/data/raw/
+IPAG-GIN-CFEExplainer/data/
 IPAG-GIN-CFEExplainer/src/__pycache__/
 IPAG-GIN-CFEExplainer/src/graph/__pycache__/
+venv/
+venv-2.4/
+checkpoints/
+outputs/preprcessed_data
+*.pth
+*.pkl
