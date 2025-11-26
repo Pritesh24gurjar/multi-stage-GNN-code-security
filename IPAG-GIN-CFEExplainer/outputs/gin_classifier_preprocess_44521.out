@@ -1,0 +1,100 @@
+==========================================
+Memory-Efficient Data Preprocessing
+Started at: Sat Nov 22 18:54:37 EST 2025
+==========================================
+
+Memory Info:
+              total        used        free      shared  buff/cache   available
+Mem:          125Gi       2.1Gi        45Gi       3.1Gi        77Gi       119Gi
+Swap:         4.0Gi        37Mi       4.0Gi
+
+
+================================================================================
+Memory-Efficient Data Preprocessing
+================================================================================
+Python version: 3.11.5 (main, Jan 16 2024, 12:03:26) [GCC 13.2.0]
+Chunk size: 50
+================================================================================
+
+Found approximately 1112 files across 637 CVE directories
+Estimated memory requirement: ~0.54 GB
+
+Creating metadata index...
+Source directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/graphs/CWE-119
+
+
+✓ Indexed 559 positive samples
+✓ Indexed 553 negative samples
+✓ Total samples: 1112
+
+Splitting data (train: 0.7, val: 0.15, test: 0.15)...
+
+Dataset split:
+  Train: 778 samples (Pos: 391, Neg: 387)
+  Val:   167 samples (Pos: 84, Neg: 83)
+  Test:  167 samples (Pos: 84, Neg: 83)
+
+================================================================================
+Processing Training Set
+================================================================================
+
+Saving 778 samples to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl...
+Processing in chunks of 50...
+Writing to disk...
+✓ Saved 778 samples
+
+================================================================================
+Processing Validation Set
+================================================================================
+
+Saving 167 samples to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl...
+Processing in chunks of 50...
+Writing to disk...
+✓ Saved 167 samples
+
+================================================================================
+Processing Test Set
+================================================================================
+
+Saving 167 samples to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/test_data.pkl...
+Processing in chunks of 50...
+Writing to disk...
+✓ Saved 167 samples
+
+================================================================================
+✓ All data preprocessed successfully!
+================================================================================
+Saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data
+  - train_data.pkl
+  - val_data.pkl
+  - test_data.pkl
+
+
+================================================================================
+✓ Preprocessing Complete!
+================================================================================
+
+Use these files for training:
+  --train-file /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl
+  --val-file /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl
+  --test-file /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/test_data.pkl
+
+
+
+==========================================
+Verifying Output Files
+==========================================
+-rw-r----- 1 sxi219 csds438 2.6G Nov 22 19:09 /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/test_data.pkl
+-rw-r----- 1 sxi219 csds438  13G Nov 22 19:07 /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl
+-rw-r----- 1 sxi219 csds438 1.9G Nov 22 19:08 /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl
+
+Dataset Statistics:
+✓ Train samples: 778
+✓ Val samples: 167
+✓ Test samples: 167
+✓ Total: 1112
+
+==========================================
+Preprocessing Complete!
+Completed at: Sat Nov 22 19:10:44 EST 2025
+==========================================

@@ -1,0 +1,19 @@
+{
+  "data_path": "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl",
+  "metadata_path": "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl",
+  "embedding_dim": 128,
+  "hidden_dim": 200,
+  "num_ggnn_layers": 3,
+  "num_steps": 8,
+  "dropout": 0.3,
+  "batch_size": 16,
+  "gradient_accumulation_steps": 8,
+  "epochs": 100,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0005,
+  "early_stopping_patience": 15,
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "random_seed": 42,
+  "min_samples_per_class": 100
+}

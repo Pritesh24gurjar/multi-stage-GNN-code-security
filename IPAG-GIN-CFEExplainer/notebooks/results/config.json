@@ -1,0 +1,21 @@
+{
+    "train_file": "results/combined_data/train_data.pkl",
+    "val_file": "results/combined_data/val_data.pkl",
+    "test_file": "results/combined_data/test_data.pkl",
+    "input_dim": 776,
+    "hidden_dims": [
+        256,
+        128,
+        64
+    ],
+    "output_dim": 2,
+    "dropout": 0.5,
+    "pooling": "mean",
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "epochs": 100,
+    "patience": 15,
+    "seed": 42,
+    "device": "cuda"
+}

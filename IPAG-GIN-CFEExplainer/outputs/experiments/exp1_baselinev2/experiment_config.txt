@@ -1,0 +1,32 @@
+Experiment Configuration
+========================
+
+Started: Tue Nov 25 04:05:20 EST 2025
+Node: classt13
+Job ID: 44814
+
+Model:
+  - Embedding Dim: 128
+  - Hidden Dim: 200
+  - GGNN Layers: 3
+  - Propagation Steps: 8
+  - Dropout: 0.3
+
+Training:
+  - Physical Batch Size: 16
+  - Gradient Accumulation: 8
+  - Effective Batch Size: 128
+  - Epochs: 100
+  - Learning Rate: 0.001
+  - Weight Decay: 5e-4
+  - Early Stopping Patience: 15
+
+Data:
+  - Test Size: 0.2
+  - Val Size: 0.1
+  - Min Samples per Class: 100
+  - Random Seed: 42
+
+Files:
+  - Data: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  - Metadata: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl

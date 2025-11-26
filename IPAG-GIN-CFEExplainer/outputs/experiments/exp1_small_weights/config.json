@@ -1,0 +1,27 @@
+{
+    "train_file": "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl",
+    "val_file": "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl",
+    "test_file": "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/test_data.pkl",
+    "input_dim": 776,
+    "hidden_dims": [
+        128,
+        64
+    ],
+    "output_dim": 2,
+    "dropout": 0.4,
+    "pooling": "mean",
+    "batch_size": 32,
+    "learning_rate": 0.0005,
+    "weight_decay": 1e-05,
+    "class_weights": [
+        1.0,
+        1.5
+    ],
+    "epochs": 50,
+    "patience": 10,
+    "use_efficient_loader": true,
+    "cache_size": 100,
+    "clear_cache_every": 5,
+    "seed": 42,
+    "device": "cuda"
+}

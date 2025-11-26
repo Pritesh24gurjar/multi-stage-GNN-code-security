@@ -1,0 +1,1631 @@
+==========================================
+GGNN CWE Classification Experiment
+Started at: Tue Nov 25 02:27:40 EST 2025
+==========================================
+
+GPU Memory Info:
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+11264 MiB, 0 MiB, 11004 MiB
+
+Using data from:
+  Graphs: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  Metadata: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+
+==========================================
+Experiment: exp1_baseline
+==========================================
+Model Configuration:
+  Embedding Dim: 128
+  Hidden Dim: 200
+  GGNN Layers: 3
+  Propagation Steps: 8
+  Dropout: 0.3
+
+Training Configuration:
+  Batch Size: 16
+  Epochs: 100
+  Learning Rate: 0.001
+  Weight Decay: 5e-4
+  Early Stopping Patience: 15
+
+Output directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp1_baseline
+
+==========================================
+Starting Training
+==========================================
+
+
+======================================================================
+EXPERIMENT: exp1_baseline
+======================================================================
+Configuration:
+  data_path: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  metadata_path: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+  embedding_dim: 128
+  hidden_dim: 200
+  num_ggnn_layers: 3
+  num_steps: 8
+  dropout: 0.3
+  batch_size: 16
+  gradient_accumulation_steps: 8
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  early_stopping_patience: 15
+  test_size: 0.2
+  val_size: 0.1
+  random_seed: 42
+  min_samples_per_class: 100
+
+Device: cuda
+Initial GPU Memory: 0.00GB / 10.75GB (0.0% used, 10.75GB free)
+
+Loading dataset...
+Loaded 149980 graphs from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  CWE classes: 91
+  Feature dim: 3
+
+Filtering rare classes...
+Original classes: 91
+Class distribution stats:
+  Max samples: 26,255
+  Min samples: 1
+  Median samples: 82
+
+Filtering classes with < 100 samples...
+Classes after filtering: 42
+Classes removed: 49
+Original samples: 149,980
+Samples after filtering: 147,910
+Removed samples: 2,070
+Remapped to 42 classes (0-41)
+
+Splitting dataset...
+
+Verifying labels...
+  Train label range: 0 to 41
+  Expected range: 0 to 41
+  ✓ Labels verified
+  Train: 106495 samples
+  Val: 11833 samples
+  Test: 29582 samples
+Class weights computed for 42 classes
+
+Creating model...
+Model created:
+  Total parameters: 68,468,494
+  Trainable parameters: 68,468,494
+  Device: cuda
+After model creation GPU Memory: 0.26GB / 10.75GB (2.4% used, 10.49GB free)
+
+======================================================================
+TRAINER CONFIGURATION
+======================================================================
+Gradient Accumulation Steps: 8
+Effective Batch Size: 128
+Initial GPU Memory: 0.26GB / 10.75GB (2.4% used, 10.49GB free)
+======================================================================
+
+
+======================================================================
+STARTING TRAINING
+======================================================================
+
+Epoch 1/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.26GB / 10.75GB (2.4% used, 10.49GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1395. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3435. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3975. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5335. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+
+⚠️  OOM at batch 6554. Clearing memory and skipping batch...
+Train Loss: 3.7374 | Train Acc: 0.0360
+Val Loss: 7.2261 | Val Acc: 0.0100
+Val F1: 0.0002 | Val AUC: 0.5537
+Val Precision: 0.0001 | Val Recall: 0.0100
+FPR: 0.0238 | FNR: 0.9762 | Fairness: 0.9939
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.0002)
+
+Epoch 2/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 804. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2274. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3215. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 3428. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6346. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 2.7306 | Train Acc: 0.1274
+Val Loss: 5.0866 | Val Acc: 0.1099
+Val F1: 0.0270 | Val AUC: 0.7108
+Val Precision: 0.0185 | Val Recall: 0.1099
+FPR: 0.0234 | FNR: 0.9470 | Fairness: 0.8131
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.0270)
+
+Epoch 3/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1367. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 1484. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2675. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4377. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5328. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 1.8730 | Train Acc: 0.2927
+Val Loss: 14.9431 | Val Acc: 0.0972
+Val F1: 0.0217 | Val AUC: 0.5678
+Val Precision: 0.0152 | Val Recall: 0.0972
+FPR: 0.0235 | FNR: 0.9649 | Fairness: 0.9261
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 4/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1550. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 1725. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3507. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 3967. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6499. Clearing memory and skipping batch...
+Train Loss: 1.3191 | Train Acc: 0.4252
+Val Loss: 5.9695 | Val Acc: 0.1076
+Val F1: 0.0253 | Val AUC: 0.7739
+Val Precision: 0.0491 | Val Recall: 0.1076
+FPR: 0.0236 | FNR: 0.9473 | Fairness: 0.8377
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 5/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 764. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1522. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 1952. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2509. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4675. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+
+⚠️  OOM at batch 6643. Clearing memory and skipping batch...
+Train Loss: 0.9725 | Train Acc: 0.5359
+Val Loss: 4.7557 | Val Acc: 0.1042
+Val F1: 0.0760 | Val AUC: 0.8117
+Val Precision: 0.1395 | Val Recall: 0.1042
+FPR: 0.0220 | FNR: 0.8860 | Fairness: 0.7711
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.0760)
+
+Epoch 6/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 303. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1286. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3056. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4936. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6094. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.7335 | Train Acc: 0.6314
+Val Loss: 5.5388 | Val Acc: 0.0783
+Val F1: 0.0744 | Val AUC: 0.8074
+Val Precision: 0.1608 | Val Recall: 0.0783
+FPR: 0.0223 | FNR: 0.9198 | Fairness: 0.7977
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 7/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 679. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1328. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1991. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4580. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5317. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.5902 | Train Acc: 0.6997
+Val Loss: 6.3776 | Val Acc: 0.1270
+Val F1: 0.0550 | Val AUC: 0.8355
+Val Precision: 0.1728 | Val Recall: 0.1270
+FPR: 0.0226 | FNR: 0.8893 | Fairness: 0.7779
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 8/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 19. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1987. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5191. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5513. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 5596. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.4958 | Train Acc: 0.7478
+Val Loss: 4.7823 | Val Acc: 0.2177
+Val F1: 0.1435 | Val AUC: 0.8823
+Val Precision: 0.3117 | Val Recall: 0.2177
+FPR: 0.0202 | FNR: 0.8532 | Fairness: 0.6905
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.1435)
+
+Epoch 9/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4005. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 4112. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5637. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 5941. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6149. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.4266 | Train Acc: 0.7868
+Val Loss: 5.0728 | Val Acc: 0.1524
+Val F1: 0.0828 | Val AUC: 0.8690
+Val Precision: 0.2554 | Val Recall: 0.1524
+FPR: 0.0222 | FNR: 0.8605 | Fairness: 0.6843
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 10/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2354. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3544. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 3688. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4206. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5587. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.3830 | Train Acc: 0.8114
+Val Loss: 4.1220 | Val Acc: 0.2206
+Val F1: 0.1755 | Val AUC: 0.8844
+Val Precision: 0.3601 | Val Recall: 0.2206
+FPR: 0.0200 | FNR: 0.7847 | Fairness: 0.5907
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.1755)
+
+Epoch 11/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 656. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1867. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4380. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4967. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5189. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.3383 | Train Acc: 0.8350
+Val Loss: 3.9048 | Val Acc: 0.2646
+Val F1: 0.2030 | Val AUC: 0.9030
+Val Precision: 0.6189 | Val Recall: 0.2646
+FPR: 0.0192 | FNR: 0.7708 | Fairness: 0.4948
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.2030)
+
+Epoch 12/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2410. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2900. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3238. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3827. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5287. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.3129 | Train Acc: 0.8488
+Val Loss: 3.7750 | Val Acc: 0.2956
+Val F1: 0.2644 | Val AUC: 0.8955
+Val Precision: 0.5119 | Val Recall: 0.2956
+FPR: 0.0177 | FNR: 0.7255 | Fairness: 0.5051
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.2644)
+
+Epoch 13/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2767. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6140. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 6302. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 6455. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.2819 | Train Acc: 0.8636
+Val Loss: 2.7025 | Val Acc: 0.4602
+Val F1: 0.4192 | Val AUC: 0.9224
+Val Precision: 0.6453 | Val Recall: 0.4602
+FPR: 0.0142 | FNR: 0.6235 | Fairness: 0.5027
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.4192)
+
+Epoch 14/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2610. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3088. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3594. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4487. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4782. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.2682 | Train Acc: 0.8749
+Val Loss: 2.7002 | Val Acc: 0.4637
+Val F1: 0.4769 | Val AUC: 0.9236
+Val Precision: 0.7107 | Val Recall: 0.4637
+FPR: 0.0137 | FNR: 0.6541 | Fairness: 0.5112
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.4769)
+
+Epoch 15/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 84. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1078. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2228. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2925. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3651. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4409. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.2500 | Train Acc: 0.8820
+Val Loss: 3.2012 | Val Acc: 0.4425
+Val F1: 0.3837 | Val AUC: 0.9255
+Val Precision: 0.6608 | Val Recall: 0.4425
+FPR: 0.0143 | FNR: 0.6767 | Fairness: 0.5054
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 16/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 202. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1270. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 1429. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3107. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5693. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.2353 | Train Acc: 0.8911
+Val Loss: 2.6376 | Val Acc: 0.5270
+Val F1: 0.5100 | Val AUC: 0.9293
+Val Precision: 0.6974 | Val Recall: 0.5270
+FPR: 0.0124 | FNR: 0.6139 | Fairness: 0.5308
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.5100)
+
+Epoch 17/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 380. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 913. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 914. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 915. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 916. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2111. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4680. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5741. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6107. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.2259 | Train Acc: 0.8964
+Val Loss: 3.1723 | Val Acc: 0.4277
+Val F1: 0.4260 | Val AUC: 0.9210
+Val Precision: 0.7158 | Val Recall: 0.4277
+FPR: 0.0149 | FNR: 0.6970 | Fairness: 0.4987
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 18/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1911. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4451. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4566. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5243. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6418. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+
+⚠️  OOM at batch 6624. Clearing memory and skipping batch...
+Train Loss: 0.2237 | Train Acc: 0.8985
+Val Loss: 2.7043 | Val Acc: 0.4239
+Val F1: 0.4115 | Val AUC: 0.9180
+Val Precision: 0.7119 | Val Recall: 0.4239
+FPR: 0.0151 | FNR: 0.6375 | Fairness: 0.5703
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 19/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 584. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2498. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2689. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4295. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4849. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 4963. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.2199 | Train Acc: 0.9006
+Val Loss: 2.8320 | Val Acc: 0.5488
+Val F1: 0.5406 | Val AUC: 0.9324
+Val Precision: 0.7204 | Val Recall: 0.5488
+FPR: 0.0118 | FNR: 0.6235 | Fairness: 0.4885
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.5406)
+
+Epoch 20/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 64. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5299. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6306. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 6431. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.2072 | Train Acc: 0.9066
+Val Loss: 2.4697 | Val Acc: 0.5326
+Val F1: 0.5421 | Val AUC: 0.9308
+Val Precision: 0.7193 | Val Recall: 0.5326
+FPR: 0.0122 | FNR: 0.5851 | Fairness: 0.5431
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.5421)
+
+Epoch 21/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 883. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2571. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3348. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4932. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5304. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1995 | Train Acc: 0.9089
+Val Loss: 2.5583 | Val Acc: 0.5393
+Val F1: 0.5126 | Val AUC: 0.9334
+Val Precision: 0.7140 | Val Recall: 0.5393
+FPR: 0.0123 | FNR: 0.5655 | Fairness: 0.5259
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 22/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1870. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2656. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3680. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4403. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5375. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1999 | Train Acc: 0.9115
+Val Loss: 3.2361 | Val Acc: 0.4918
+Val F1: 0.4613 | Val AUC: 0.9248
+Val Precision: 0.6828 | Val Recall: 0.4918
+FPR: 0.0133 | FNR: 0.6931 | Fairness: 0.4864
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 23/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1415. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4673. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 4840. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6215. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1950 | Train Acc: 0.9121
+Val Loss: 3.0698 | Val Acc: 0.4576
+Val F1: 0.4252 | Val AUC: 0.9238
+Val Precision: 0.7071 | Val Recall: 0.4576
+FPR: 0.0143 | FNR: 0.6780 | Fairness: 0.5528
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 24/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1844. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2147. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3009. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4391. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5563. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1806 | Train Acc: 0.9176
+Val Loss: 2.7039 | Val Acc: 0.4731
+Val F1: 0.4742 | Val AUC: 0.9243
+Val Precision: 0.7304 | Val Recall: 0.4731
+FPR: 0.0138 | FNR: 0.6028 | Fairness: 0.5431
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 25/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 164. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 318. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 368. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2163. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4782. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1856 | Train Acc: 0.9191
+Val Loss: 2.3482 | Val Acc: 0.5676
+Val F1: 0.5741 | Val AUC: 0.9309
+Val Precision: 0.7300 | Val Recall: 0.5676
+FPR: 0.0113 | FNR: 0.5464 | Fairness: 0.6133
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.5741)
+
+Epoch 26/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2061. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2650. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 2658. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3278. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5431. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6466. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1764 | Train Acc: 0.9214
+Val Loss: 2.4863 | Val Acc: 0.4715
+Val F1: 0.4779 | Val AUC: 0.9264
+Val Precision: 0.7477 | Val Recall: 0.4715
+FPR: 0.0138 | FNR: 0.5925 | Fairness: 0.5931
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 27/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 221. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1518. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3990. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4183. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4675. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1703 | Train Acc: 0.9239
+Val Loss: 3.0782 | Val Acc: 0.4907
+Val F1: 0.4818 | Val AUC: 0.9275
+Val Precision: 0.7234 | Val Recall: 0.4907
+FPR: 0.0132 | FNR: 0.6442 | Fairness: 0.5040
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 28/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 862. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1967. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2158. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 2378. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6098. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1651 | Train Acc: 0.9255
+Val Loss: 2.7598 | Val Acc: 0.5292
+Val F1: 0.5309 | Val AUC: 0.9286
+Val Precision: 0.7159 | Val Recall: 0.5292
+FPR: 0.0123 | FNR: 0.6256 | Fairness: 0.5467
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 29/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 309. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1111. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2593. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4226. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5215. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1623 | Train Acc: 0.9275
+Val Loss: 3.4852 | Val Acc: 0.5196
+Val F1: 0.5114 | Val AUC: 0.9280
+Val Precision: 0.7372 | Val Recall: 0.5196
+FPR: 0.0128 | FNR: 0.6892 | Fairness: 0.5619
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 30/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1722. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2009. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2748. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4039. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5960. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1568 | Train Acc: 0.9298
+Val Loss: 2.3665 | Val Acc: 0.5764
+Val F1: 0.5933 | Val AUC: 0.9304
+Val Precision: 0.7357 | Val Recall: 0.5764
+FPR: 0.0110 | FNR: 0.5152 | Fairness: 0.6350
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.5933)
+
+Epoch 31/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1239. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1625. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 1942. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2553. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5397. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5515. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1550 | Train Acc: 0.9308
+Val Loss: 2.5472 | Val Acc: 0.5790
+Val F1: 0.5857 | Val AUC: 0.9338
+Val Precision: 0.7315 | Val Recall: 0.5790
+FPR: 0.0110 | FNR: 0.5585 | Fairness: 0.5938
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 32/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2538. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3938. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4135. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+
+⚠️  OOM at batch 6544. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 6637. Clearing memory and skipping batch...
+Train Loss: 0.1539 | Train Acc: 0.9309
+Val Loss: 2.8319 | Val Acc: 0.5415
+Val F1: 0.5471 | Val AUC: 0.9320
+Val Precision: 0.7269 | Val Recall: 0.5415
+FPR: 0.0120 | FNR: 0.5886 | Fairness: 0.5394
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 33/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 301. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2146. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2832. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3032. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4808. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1474 | Train Acc: 0.9334
+Val Loss: 2.9348 | Val Acc: 0.4774
+Val F1: 0.4750 | Val AUC: 0.9266
+Val Precision: 0.7310 | Val Recall: 0.4774
+FPR: 0.0136 | FNR: 0.6086 | Fairness: 0.5626
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 34/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 54. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1998. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2276. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3692. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5858. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1443 | Train Acc: 0.9352
+Val Loss: 2.9747 | Val Acc: 0.4841
+Val F1: 0.4715 | Val AUC: 0.9269
+Val Precision: 0.7142 | Val Recall: 0.4841
+FPR: 0.0136 | FNR: 0.6069 | Fairness: 0.5230
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 35/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 828. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1896. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3221. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 3329. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5819. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1454 | Train Acc: 0.9368
+Val Loss: 2.9556 | Val Acc: 0.5060
+Val F1: 0.5177 | Val AUC: 0.9299
+Val Precision: 0.7340 | Val Recall: 0.5060
+FPR: 0.0128 | FNR: 0.6164 | Fairness: 0.5598
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 36/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1322. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2390. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2623. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5129. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+
+⚠️  OOM at batch 6592. Clearing memory and skipping batch...
+Train Loss: 0.1366 | Train Acc: 0.9373
+Val Loss: 2.8476 | Val Acc: 0.5430
+Val F1: 0.5390 | Val AUC: 0.9315
+Val Precision: 0.7230 | Val Recall: 0.5430
+FPR: 0.0121 | FNR: 0.5853 | Fairness: 0.5733
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 37/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1494. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2061. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2885. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3982. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5426. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1385 | Train Acc: 0.9385
+Val Loss: 2.9189 | Val Acc: 0.5342
+Val F1: 0.5230 | Val AUC: 0.9286
+Val Precision: 0.7101 | Val Recall: 0.5342
+FPR: 0.0121 | FNR: 0.5935 | Fairness: 0.5649
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 38/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2205. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2543. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3084. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3765. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4405. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1362 | Train Acc: 0.9392
+Val Loss: 2.5589 | Val Acc: 0.6074
+Val F1: 0.6124 | Val AUC: 0.9348
+Val Precision: 0.7325 | Val Recall: 0.6074
+FPR: 0.0103 | FNR: 0.5416 | Fairness: 0.6026
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.6124)
+
+Epoch 39/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 985. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1661. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3328. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5114. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5863. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1339 | Train Acc: 0.9398
+Val Loss: 2.4861 | Val Acc: 0.5964
+Val F1: 0.6094 | Val AUC: 0.9346
+Val Precision: 0.7311 | Val Recall: 0.5964
+FPR: 0.0105 | FNR: 0.5242 | Fairness: 0.6233
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 40/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 698. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2172. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2962. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3300. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3891. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1304 | Train Acc: 0.9417
+Val Loss: 2.5220 | Val Acc: 0.5682
+Val F1: 0.5863 | Val AUC: 0.9322
+Val Precision: 0.7355 | Val Recall: 0.5682
+FPR: 0.0112 | FNR: 0.5454 | Fairness: 0.5845
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 41/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+
+⚠️  OOM at batch 3301. Clearing memory and skipping batch...
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4292. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 4386. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4565. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+
+⚠️  OOM at batch 5000. Clearing memory and skipping batch...
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1292 | Train Acc: 0.9423
+Val Loss: 2.6379 | Val Acc: 0.5607
+Val F1: 0.5723 | Val AUC: 0.9326
+Val Precision: 0.7301 | Val Recall: 0.5607
+FPR: 0.0115 | FNR: 0.5620 | Fairness: 0.5300
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 42/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2335. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+
+⚠️  OOM at batch 3872. Clearing memory and skipping batch...
+  [Batch 4000] Memory: 0.78GB
+  [Batch 4500] Memory: 1.04GB
+
+⚠️  OOM at batch 4550. Clearing memory and skipping batch...
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+
+⚠️  OOM at batch 5613. Clearing memory and skipping batch...
+  [Batch 6000] Memory: 0.78GB
+
+⚠️  OOM at batch 6336. Clearing memory and skipping batch...
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1248 | Train Acc: 0.9428
+Val Loss: 2.3837 | Val Acc: 0.6259
+Val F1: 0.6243 | Val AUC: 0.9350
+Val Precision: 0.7210 | Val Recall: 0.6259
+FPR: 0.0098 | FNR: 0.5036 | Fairness: 0.6103
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.6243)
+
+Epoch 43/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+
+⚠️  OOM at batch 606. Clearing memory and skipping batch...
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+  [Batch 2000] Memory: 0.78GB
+
+⚠️  OOM at batch 2383. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 2495. Clearing memory and skipping batch...
+  [Batch 2500] Memory: 1.04GB
+
+⚠️  OOM at batch 2737. Clearing memory and skipping batch...
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4343. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1271 | Train Acc: 0.9442
+Val Loss: 2.2289 | Val Acc: 0.6371
+Val F1: 0.6516 | Val AUC: 0.9346
+Val Precision: 0.7388 | Val Recall: 0.6371
+FPR: 0.0094 | FNR: 0.4545 | Fairness: 0.7300
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+✓ Best model saved (F1: 0.6516)
+
+Epoch 44/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+⚠️  OOM at batch 60. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 122. Clearing memory and skipping batch...
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1947. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4008. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 4394. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1247 | Train Acc: 0.9438
+Val Loss: 2.7092 | Val Acc: 0.5620
+Val F1: 0.5761 | Val AUC: 0.9324
+Val Precision: 0.7368 | Val Recall: 0.5620
+FPR: 0.0114 | FNR: 0.5633 | Fairness: 0.5146
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 45/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+  [Batch 500] Memory: 1.04GB
+  [Batch 1000] Memory: 0.78GB
+
+⚠️  OOM at batch 1365. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 1463. Clearing memory and skipping batch...
+  [Batch 1500] Memory: 1.04GB
+
+⚠️  OOM at batch 1597. Clearing memory and skipping batch...
+  [Batch 2000] Memory: 0.78GB
+  [Batch 2500] Memory: 1.04GB
+  [Batch 3000] Memory: 0.78GB
+  [Batch 3500] Memory: 1.04GB
+  [Batch 4000] Memory: 0.78GB
+
+⚠️  OOM at batch 4214. Clearing memory and skipping batch...
+
+⚠️  OOM at batch 4493. Clearing memory and skipping batch...
+  [Batch 4500] Memory: 1.04GB
+  [Batch 5000] Memory: 0.78GB
+  [Batch 5500] Memory: 1.04GB
+  [Batch 6000] Memory: 0.78GB
+  [Batch 6500] Memory: 1.04GB
+Train Loss: 0.1242 | Train Acc: 0.9458
+Val Loss: 2.6171 | Val Acc: 0.5799
+Val F1: 0.5877 | Val AUC: 0.9296
+Val Precision: 0.7247 | Val Recall: 0.5799
+FPR: 0.0110 | FNR: 0.5355 | Fairness: 0.6197
+Post-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)
+
+Epoch 46/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.78GB / 10.75GB (7.3% used, 9.96GB free)

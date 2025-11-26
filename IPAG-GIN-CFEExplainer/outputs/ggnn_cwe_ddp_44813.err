@@ -1,0 +1,55 @@
+
+The following have been reloaded with a version change:
+  1) GCCcore/12.3.0 => GCCcore/13.2.0
+  2) Python/3.11.3-GCCcore-12.3.0 => Python/3.11.5-GCCcore-13.2.0
+  3) SQLite/3.42.0-GCCcore-12.3.0 => SQLite/3.43.1-GCCcore-13.2.0
+  4) Tcl/8.6.13-GCCcore-12.3.0 => Tcl/8.6.13-GCCcore-13.2.0
+  5) XZ/5.4.2-GCCcore-12.3.0 => XZ/5.4.4-GCCcore-13.2.0
+  6) binutils/2.40-GCCcore-12.3.0 => binutils/2.40-GCCcore-13.2.0
+  7) bzip2/1.0.8-GCCcore-12.3.0 => bzip2/1.0.8-GCCcore-13.2.0
+  8) libffi/3.4.4-GCCcore-12.3.0 => libffi/3.4.4-GCCcore-13.2.0
+  9) libreadline/8.2-GCCcore-12.3.0 => libreadline/8.2-GCCcore-13.2.0
+ 10) ncurses/6.4-GCCcore-12.3.0 => ncurses/6.4-GCCcore-13.2.0
+ 11) zlib/1.2.13-GCCcore-12.3.0 => zlib/1.2.13-GCCcore-13.2.0
+
+W1125 03:24:03.387000 140549912963968 torch/distributed/run.py:779] 
+W1125 03:24:03.387000 140549912963968 torch/distributed/run.py:779] *****************************************
+W1125 03:24:03.387000 140549912963968 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 03:24:03.387000 140549912963968 torch/distributed/run.py:779] *****************************************
+[W1125 03:24:21.179554329 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W1125 03:24:21.179574116 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+W1125 03:25:26.482000 140549912963968 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 1357559 closing signal SIGTERM
+E1125 03:25:28.254000 140549912963968 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: -9) local_rank: 0 (pid: 1357558) of binary: /mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/bin/python
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/training_ddp_ggnn.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-11-25_03:25:26
+  host      : class13t.priv.cwru.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : -9 (pid: 1357558)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 1357558
+============================================================
+[2025-11-25T03:25:29.439] error: Detected 1 oom_kill event in StepId=44813.batch. Some of the step tasks have been OOM Killed.

@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/trainer_multiclass_cache_clearing.py", line 832, in <module>
+    main()
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/trainer_multiclass_cache_clearing.py", line 714, in main
+    train_metrics = train_one_epoch(
+                    ^^^^^^^^^^^^^^^^
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/trainer_multiclass_cache_clearing.py", line 331, in train_one_epoch
+    out = model(batch.x, batch.edge_index, batch.batch)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/model/ggnn_cwe_classifier.py", line 168, in forward
+    h_new = ggnn_layer(h, edge_index)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch_geometric/nn/conv/gated_graph_conv.py", line 80, in forward
+    x = self.rnn(m, x)
+        ^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/rnn.py", line 1477, in forward
+    ret = _VF.gru_cell(
+          ^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 46.00 MiB. GPU 0 has a total capacity of 10.75 GiB of which 7.56 MiB is free. Including non-PyTorch memory, this process has 10.74 GiB memory in use. Of the allocated memory 9.66 GiB is allocated by PyTorch, and 906.17 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

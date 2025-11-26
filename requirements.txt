@@ -12,4 +12,10 @@ jupyter-server
 ipykernel
 pyarrow
 transformers
-pybind11
+typing_extensions
+tree_sitter
+tree_sitter_c
+tree_sitter_python
+tree_sitter_java
+tree_sitter_cpp
+

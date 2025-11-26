@@ -1,0 +1,19 @@
+==========================================
+Data Preprocessing Started
+Started at: Sat Nov 22 18:37:46 EST 2025
+==========================================
+
+Loading and combining data...
+Source directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/graphs/CWE-119
+
+Found 637 CVE directories
+
+==========================================
+Data Preprocessing Complete
+Completed at: Sat Nov 22 18:46:20 EST 2025
+==========================================
+
+Checking preprocessed files:
+-rw-r----- 1 sxi219 csds438 11G Nov 22 18:45 /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl
+
+Dataset statistics:

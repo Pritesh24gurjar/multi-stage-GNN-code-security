@@ -1,3 +1,17 @@
 [build-system]
-requires = ["setuptools", "wheel", "pybind11"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipag_gin"
+version = "0.1.0"
+description = "GNN and code security modules"
+authors = [
+    { name="Sri Satya Sai Immani", email="sxi219@case.edu" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[tool.setuptools.packages]
+find = { where = ["src"] }

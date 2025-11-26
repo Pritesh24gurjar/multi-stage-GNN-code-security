@@ -7,5 +7,6 @@ venv/
 venv-2.4/
 checkpoints/
 outputs/preprcessed_data
-*.pth
-*.pkl
+**/*.pth
+**/*.pkl
+**/*.pt

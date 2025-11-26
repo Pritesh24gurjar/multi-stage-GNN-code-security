@@ -1,0 +1,370 @@
+==========================================
+Experiment 7: Fine-tuned Class Weights (1.0/1.75)
+Goal: Find sweet spot between 1.5 (Exp1) and 2.0 (Exp3)
+Started at: Sat Nov 22 21:10:40 EST 2025
+==========================================
+
+GPU Memory Info:
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+11264 MiB, 0 MiB, 11004 MiB
+
+Using preprocessed data from: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data
+
+
+================================================================================
+GIN Vulnerability Classifier - BigVul Dataset
+================================================================================
+Device: cuda
+Output Directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights
+GPU: NVIDIA GeForce RTX 2080 Ti
+GPU Memory: 11.54 GB
+================================================================================
+
+
+================================================================================
+Configuration
+================================================================================
+  train_file                : /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl
+  val_file                  : /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl
+  test_file                 : /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/test_data.pkl
+  input_dim                 : 776
+  hidden_dims               : [128, 64]
+  output_dim                : 2
+  dropout                   : 0.4
+  pooling                   : mean
+  batch_size                : 32
+  learning_rate             : 0.0005
+  weight_decay              : 1e-05
+  class_weights             : [1.0, 1.75]
+  epochs                    : 50
+  patience                  : 10
+  use_efficient_loader      : True
+  cache_size                : 100
+  clear_cache_every         : 5
+  seed                      : 42
+  device                    : cuda
+================================================================================
+
+Loading datasets...
+Using memory-efficient data loader...
+Loading metadata from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl...
+Loaded 778 samples from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/train_data.pkl
+  Positive: 391, Negative: 387
+Using LRU cache with size: 100
+Loading metadata from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl...
+Loaded 167 samples from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl
+  Positive: 84, Negative: 83
+Using LRU cache with size: 50
+Loading metadata from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/test_data.pkl...
+Loaded 167 samples from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/test_data.pkl
+  Positive: 84, Negative: 83
+Using LRU cache with size: 50
+
+Initializing GIN model...
+Total parameters: 131,300
+Trainable parameters: 131,300
+Samples/Parameter ratio: 0.005925
+⚠ WARNING: Very low samples/parameter ratio - model may overfit
+  Consider: reducing model size or collecting more data
+
+Using class weights: [1.0, 1.75]
+Starting training...
+
+
+================================================================================
+Starting Training
+================================================================================
+
+
+================================================================================
+Epoch 1/50
+================================================================================
+Train Loss: 0.6549 | Train Acc: 0.5129
+Val Loss: 0.6529 | Val Acc: 0.5030
+Val Precision: 0.5030 | Val Recall: 1.0000 | Val F1: 0.6693
+Val AUC: 0.7610
+RAI Metrics - FPR: 1.0000 | FNR: 0.0000 | Fairness: 0.0000
+✓ Best model updated
+
+================================================================================
+Epoch 2/50
+================================================================================
+Train Loss: 0.6147 | Train Acc: 0.5733
+Val Loss: 0.6441 | Val Acc: 0.6527
+Val Precision: 0.6066 | Val Recall: 0.8810 | Val F1: 0.7184
+Val AUC: 0.6982
+RAI Metrics - FPR: 0.5783 | FNR: 0.1190 | Fairness: 0.5407
+✓ Best model updated
+
+================================================================================
+Epoch 3/50
+================================================================================
+Train Loss: 0.5686 | Train Acc: 0.6440
+Val Loss: 0.6124 | Val Acc: 0.6766
+Val Precision: 0.6531 | Val Recall: 0.7619 | Val F1: 0.7033
+Val AUC: 0.7291
+RAI Metrics - FPR: 0.4096 | FNR: 0.2381 | Fairness: 0.8285
+No improvement (1/10)
+
+================================================================================
+Epoch 4/50
+================================================================================
+Train Loss: 0.5095 | Train Acc: 0.7134
+Val Loss: 0.6661 | Val Acc: 0.6168
+Val Precision: 0.6667 | Val Recall: 0.4762 | Val F1: 0.5556
+Val AUC: 0.7018
+RAI Metrics - FPR: 0.2410 | FNR: 0.5238 | Fairness: 0.7172
+No improvement (2/10)
+
+================================================================================
+Epoch 5/50
+================================================================================
+Train Loss: 0.4902 | Train Acc: 0.7339
+Val Loss: 0.6277 | Val Acc: 0.6108
+Val Precision: 0.5760 | Val Recall: 0.8571 | Val F1: 0.6890
+Val AUC: 0.6870
+RAI Metrics - FPR: 0.6386 | FNR: 0.1429 | Fairness: 0.5043
+No improvement (3/10)
+
+================================================================================
+Epoch 6/50
+================================================================================
+Clearing GPU cache...
+Train Loss: 0.4250 | Train Acc: 0.8033
+Val Loss: 1.0417 | Val Acc: 0.5030
+Val Precision: 0.5714 | Val Recall: 0.0476 | Val F1: 0.0879
+Val AUC: 0.6810
+RAI Metrics - FPR: 0.0361 | FNR: 0.9524 | Fairness: 0.0838
+No improvement (4/10)
+
+================================================================================
+Epoch 7/50
+================================================================================
+Train Loss: 0.3860 | Train Acc: 0.8188
+Val Loss: 0.8324 | Val Acc: 0.5808
+Val Precision: 0.5473 | Val Recall: 0.9643 | Val F1: 0.6983
+Val AUC: 0.6173
+RAI Metrics - FPR: 0.8072 | FNR: 0.0357 | Fairness: 0.2285
+No improvement (5/10)
+
+================================================================================
+Epoch 8/50
+================================================================================
+Train Loss: 0.3373 | Train Acc: 0.8432
+Val Loss: 1.1401 | Val Acc: 0.4910
+Val Precision: 0.4444 | Val Recall: 0.0476 | Val F1: 0.0860
+Val AUC: 0.6454
+RAI Metrics - FPR: 0.0602 | FNR: 0.9524 | Fairness: 0.1079
+No improvement (6/10)
+
+================================================================================
+Epoch 9/50
+================================================================================
+Train Loss: 0.2981 | Train Acc: 0.8830
+Val Loss: 0.9900 | Val Acc: 0.5928
+Val Precision: 0.6905 | Val Recall: 0.3452 | Val F1: 0.4603
+Val AUC: 0.6820
+RAI Metrics - FPR: 0.1566 | FNR: 0.6548 | Fairness: 0.5019
+No improvement (7/10)
+
+================================================================================
+Epoch 10/50
+================================================================================
+Train Loss: 0.2713 | Train Acc: 0.8946
+Val Loss: 1.1972 | Val Acc: 0.4850
+Val Precision: 0.4615 | Val Recall: 0.1429 | Val F1: 0.2182
+Val AUC: 0.5816
+RAI Metrics - FPR: 0.1687 | FNR: 0.8571 | Fairness: 0.3115
+No improvement (8/10)
+
+================================================================================
+Epoch 11/50
+================================================================================
+Clearing GPU cache...
+Train Loss: 0.2453 | Train Acc: 0.9087
+Val Loss: 0.9872 | Val Acc: 0.5868
+Val Precision: 0.6271 | Val Recall: 0.4405 | Val F1: 0.5175
+Val AUC: 0.6454
+RAI Metrics - FPR: 0.2651 | FNR: 0.5595 | Fairness: 0.7055
+No improvement (9/10)
+
+================================================================================
+Epoch 12/50
+================================================================================
+Train Loss: 0.2044 | Train Acc: 0.9280
+Val Loss: 1.1652 | Val Acc: 0.5689
+Val Precision: 0.5968 | Val Recall: 0.4405 | Val F1: 0.5068
+Val AUC: 0.6163
+RAI Metrics - FPR: 0.3012 | FNR: 0.5595 | Fairness: 0.7417
+No improvement (10/10)
+
+Early stopping triggered after 12 epochs
+Best epoch: 2 with F1: 0.7184
+
+Best model from epoch 2 loaded
+
+Final Evaluation on Validation Set...
+
+================================================================================
+Validation Evaluation Results
+================================================================================
+  Accuracy   : 0.5689
+  Precision  : 0.5968
+  Recall     : 0.4405
+  F1 Score   : 0.5068
+  AUC        : 0.6163
+
+Responsible AI Metrics:
+  FPR (False Positive Rate) : 0.3012
+  FNR (False Negative Rate) : 0.5595
+  Fairness Score            : 0.7417
+================================================================================
+
+Validation Classification Report:
+                precision    recall  f1-score   support
+
+Non-Vulnerable       0.55      0.70      0.62        83
+    Vulnerable       0.60      0.44      0.51        84
+
+      accuracy                           0.57       167
+     macro avg       0.57      0.57      0.56       167
+  weighted avg       0.57      0.57      0.56       167
+
+✓ Training history saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/training_history.png
+✓ Confusion matrix saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/confusion_matrix.png
+✓ ROC curve saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/roc_curve.png
+✓ RAI metrics plot saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/rai_metrics.png
+
+Final Evaluation on Test Set...
+
+================================================================================
+Test Evaluation Results
+================================================================================
+  Accuracy   : 0.5749
+  Precision  : 0.6102
+  Recall     : 0.4286
+  F1 Score   : 0.5035
+  AUC        : 0.6530
+
+Responsible AI Metrics:
+  FPR (False Positive Rate) : 0.2771
+  FNR (False Negative Rate) : 0.5714
+  Fairness Score            : 0.7057
+================================================================================
+
+Test Classification Report:
+                precision    recall  f1-score   support
+
+Non-Vulnerable       0.56      0.72      0.63        83
+    Vulnerable       0.61      0.43      0.50        84
+
+      accuracy                           0.57       167
+     macro avg       0.58      0.58      0.57       167
+  weighted avg       0.58      0.57      0.57       167
+
+✓ Training history saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/test_plots/training_history.png
+✓ Confusion matrix saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/test_plots/confusion_matrix.png
+✓ ROC curve saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/test_plots/roc_curve.png
+✓ RAI metrics plot saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/test_plots/rai_metrics.png
+✓ Model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/final_model.pth
+✓ Training history saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/training_history.json
+
+================================================================================
+Training Complete!
+Results saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights
+================================================================================
+
+Generated files:
+  - config.json              : Training configuration
+  - final_model.pth          : Trained model checkpoint
+  - training_history.json    : Per-epoch metrics
+  - validation_metrics.json  : Final validation metrics
+  - test_metrics.json        : Final test metrics
+  - training_history.png     : Training curves
+  - confusion_matrix.png     : Confusion matrix
+  - roc_curve.png           : ROC curve
+  - rai_metrics.png         : RAI metrics over training
+================================================================================
+
+
+
+==========================================
+Starting Threshold Tuning
+==========================================
+
+====================================================================================================
+Optimal Threshold Finder
+====================================================================================================
+Device: cuda
+Model: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/final_model.pth
+Validation data: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl
+Constraints: Recall >= 0.75, Precision >= 0.5
+====================================================================================================
+
+Loading model...
+✓ Model loaded successfully
+
+Loading validation data...
+Loaded 167 samples from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/preprocessed_data/val_data.pkl
+  Positive: 84, Negative: 83
+✓ Loaded 167 validation samples
+
+
+Collecting predictions...
+
+====================================================================================================
+Threshold    Accuracy   Precision  Recall     F1         FPR        FNR        Fairness  
+====================================================================================================
+0.20         0.5868     0.5843     0.6190     0.6012     0.4458     0.3810     0.9352    
+0.25         0.5868     0.5926     0.5714     0.5818     0.3976     0.4286     0.9690    
+0.30         0.5808     0.5921     0.5357     0.5625     0.3735     0.4643     0.9092    
+0.35         0.5689     0.5857     0.4881     0.5325     0.3494     0.5119     0.8375    
+0.40         0.5569     0.5735     0.4643     0.5132     0.3494     0.5357     0.8137    
+0.45         0.5509     0.5692     0.4405     0.4966     0.3373     0.5595     0.7778    
+0.50         0.5689     0.5968     0.4405     0.5068     0.3012     0.5595     0.7417    
+0.55         0.5569     0.5862     0.4048     0.4789     0.2892     0.5952     0.6939    
+0.60         0.5689     0.6154     0.3810     0.4706     0.2410     0.6190     0.6219    
+0.65         0.5629     0.6222     0.3333     0.4341     0.2048     0.6667     0.5382    
+0.70         0.5389     0.5854     0.2857     0.3840     0.2048     0.7143     0.4905    
+0.75         0.5150     0.5429     0.2262     0.3193     0.1928     0.7738     0.4190    
+0.80         0.4910     0.4828     0.1667     0.2478     0.1807     0.8333     0.3474    
+0.85         0.4910     0.4762     0.1190     0.1905     0.1325     0.8810     0.2516    
+====================================================================================================
+
+⚠ WARNING: No threshold meets the minimum recall and precision constraints!
+  Constraints: Recall >= 0.75, Precision >= 0.5
+
+  Relaxing constraints to find best threshold...
+
+  Using threshold with highest fairness (no constraints)
+
+====================================================================================================
+✓ Best Threshold: 0.25
+====================================================================================================
+  Accuracy:       0.5868
+  Precision:      0.5926
+  Recall:         0.5714
+  F1 Score:       0.5818
+  FPR:            0.3976
+  FNR:            0.4286
+  Fairness:       0.9690
+
+Confusion Matrix:
+  TN: 50     FP: 33
+  FN: 36     TP: 48
+====================================================================================================
+
+✓ Results saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/optimal_threshold.json
+
+✓ Threshold curves saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp7_fine_tuned_weights/optimal_threshold_curves.png
+
+✓ Threshold optimization complete!
+✓ Threshold tuning complete
+
+==========================================
+Final GPU Memory:
+memory.used [MiB]
+0 MiB
+
+Completed at: Sat Nov 22 21:12:48 EST 2025
+==========================================

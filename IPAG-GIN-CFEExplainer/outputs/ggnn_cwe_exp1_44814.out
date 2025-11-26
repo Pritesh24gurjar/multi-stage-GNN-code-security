@@ -1,0 +1,211 @@
+==========================================
+GGNN CWE Classification Experiment
+NO BATCH SKIPPING - Improved Memory Management
+Started at: Tue Nov 25 04:05:11 EST 2025
+==========================================
+
+Python Environment:
+/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/bin/python
+Python 3.11.5
+
+PyTorch Info:
+PyTorch: 2.4.0+cu121
+CUDA Available: True
+CUDA Version: 12.1
+
+GPU Memory Info:
+name, memory.total [MiB], memory.used [MiB], memory.free [MiB]
+NVIDIA GeForce RTX 2080 Ti, 11264 MiB, 0 MiB, 11004 MiB
+
+Using data from:
+  Graphs: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  Metadata: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+
+Data file sizes:
+  Graphs: 5.1G
+  Metadata: 2.5K
+
+==========================================
+Experiment: exp1_baselinev2
+==========================================
+Model Configuration:
+  Embedding Dim: 128
+  Hidden Dim: 200
+  GGNN Layers: 3
+  Propagation Steps: 8
+  Dropout: 0.3
+
+Training Configuration:
+  Physical Batch Size: 16
+  Gradient Accumulation Steps: 8
+  Effective Batch Size: 128
+  Epochs: 100
+  Learning Rate: 0.001
+  Weight Decay: 5e-4
+  Early Stopping Patience: 15
+
+Data Configuration:
+  Test Size: 0.2
+  Val Size: 0.1
+  Min Samples per Class: 100
+  Random Seed: 42
+
+Output directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp1_baselinev2
+
+GPU monitoring started (PID: 1357885)
+GPU logs: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp1_baselinev2/logs/gpu_usage.log
+
+==========================================
+Starting Training
+==========================================
+
+/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+
+======================================================================
+EXPERIMENT: exp1_baselinev2
+======================================================================
+Configuration:
+  data_path: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  metadata_path: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+  embedding_dim: 128
+  hidden_dim: 200
+  num_ggnn_layers: 3
+  num_steps: 8
+  dropout: 0.3
+  batch_size: 16
+  gradient_accumulation_steps: 8
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  early_stopping_patience: 15
+  test_size: 0.2
+  val_size: 0.1
+  random_seed: 42
+  min_samples_per_class: 100
+
+Device: cuda
+Initial GPU Memory: 0.00GB / 10.75GB (0.0% used, 10.75GB free)
+
+Loading dataset...
+Loaded 149980 graphs from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  CWE classes: 91
+  Feature dim: 3
+
+Filtering rare classes...
+Original classes: 91
+Class distribution stats:
+  Max samples: 26,255
+  Min samples: 1
+  Median samples: 82
+
+Filtering classes with < 100 samples...
+Classes after filtering: 42
+Classes removed: 49
+Original samples: 149,980
+Samples after filtering: 147,910
+Removed samples: 2,070
+Remapped to 42 classes (0-41)
+
+Splitting dataset...
+
+Verifying labels...
+  Train label range: 0 to 41
+  Expected range: 0 to 41
+  ✓ Labels verified
+  Train: 106495 samples
+  Val: 11833 samples
+  Test: 29582 samples
+Class weights computed for 42 classes
+
+Creating model...
+Model created:
+  Total parameters: 68,468,494
+  Trainable parameters: 68,468,494
+  Device: cuda
+After model creation GPU Memory: 0.26GB / 10.75GB (2.4% used, 10.49GB free)
+
+======================================================================
+TRAINER CONFIGURATION
+======================================================================
+Gradient Accumulation Steps: 8
+Effective Batch Size: 128
+Initial GPU Memory: 0.26GB / 10.75GB (2.4% used, 10.49GB free)
+======================================================================
+
+
+======================================================================
+STARTING TRAINING (NO BATCH SKIPPING MODE)
+======================================================================
+
+Epoch 1/100
+----------------------------------------------------------------------
+Pre-epoch GPU Memory: 0.26GB / 10.75GB (2.4% used, 10.49GB free)
+Training:   0%|          | 0/6656 [00:00<?, ?it/s]Training:   0%|          | 1/6656 [00:06<11:13:52,  6.08s/it]Training:   0%|          | 3/6656 [00:06<2:59:38,  1.62s/it] Training:   0%|          | 5/6656 [00:06<1:30:47,  1.22it/s]Training:   0%|          | 8/6656 [00:06<47:01,  2.36it/s]  Training:   0%|          | 11/6656 [00:11<1:48:28,  1.02it/s]Training:   0%|          | 14/6656 [00:11<1:09:06,  1.60it/s]Training:   0%|          | 17/6656 [00:11<46:31,  2.38it/s]  Training:   0%|          | 21/6656 [00:17<1:24:57,  1.30it/s]Training:   0%|          | 24/6656 [00:17<1:00:59,  1.81it/s]Training:   0%|          | 27/6656 [00:17<43:52,  2.52it/s]  Training:   0%|          | 29/6656 [00:17<35:26,  3.12it/s]Training:   0%|          | 31/6656 [00:22<1:35:54,  1.15it/s]Training:   1%|          | 34/6656 [00:22<1:04:37,  1.71it/s]Training:   1%|          | 37/6656 [00:22<44:52,  2.46it/s]  Training:   1%|          | 40/6656 [00:23<32:35,  3.38it/s]Training:   1%|          | 42/6656 [00:28<1:29:10,  1.24it/s]Training:   1%|          | 45/6656 [00:28<1:00:55,  1.81it/s]Training:   1%|          | 48/6656 [00:28<42:50,  2.57it/s]  Training:   1%|          | 51/6656 [00:33<1:27:54,  1.25it/s]Training:   1%|          | 53/6656 [00:33<1:08:56,  1.60it/s]Training:   1%|          | 56/6656 [00:33<47:38,  2.31it/s]  Training:   1%|          | 59/6656 [00:33<33:40,  3.27it/s]Training:   1%|          | 62/6656 [00:38<1:21:27,  1.35it/s]Training:   1%|          | 64/6656 [00:38<1:04:09,  1.71it/s]Training:   1%|          | 67/6656 [00:39<44:28,  2.47it/s]  Training:   1%|          | 70/6656 [00:39<31:28,  3.49it/s]Training:   1%|          | 73/6656 [00:44<1:20:56,  1.36it/s]Training:   1%|          | 75/6656 [00:44<1:03:35,  1.72it/s]Training:   1%|          | 79/6656 [00:44<39:51,  2.75it/s]  Training:   1%|          | 81/6656 [00:49<1:31:57,  1.19it/s]Training:   1%|          | 83/6656 [00:49<1:11:42,  1.53it/s]Training:   1%|▏         | 86/6656 [00:49<49:00,  2.23it/s]  Training:   1%|▏         | 88/6656 [00:50<39:23,  2.78it/s]Training:   1%|▏         | 91/6656 [00:55<1:31:21,  1.20it/s]Training:   1%|▏         | 94/6656 [00:55<1:02:43,  1.74it/s]Training:   1%|▏         | 97/6656 [00:55<44:06,  2.48it/s]  Training:   1%|▏         | 97/6656 [01:00<44:06,  2.48it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 100/6656 [01:00<1:27:57,  1.24it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 102/6656 [01:05<2:09:48,  1.19s/it, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 104/6656 [01:05<1:39:26,  1.10it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 107/6656 [01:05<1:07:39,  1.61it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 110/6656 [01:05<46:27,  2.35it/s, loss=4.5667, mem=1.0GB]  Training:   2%|▏         | 112/6656 [01:11<1:42:45,  1.06it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 114/6656 [01:11<1:18:04,  1.40it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 117/6656 [01:11<51:45,  2.11it/s, loss=4.5667, mem=1.0GB]  Training:   2%|▏         | 120/6656 [01:11<36:56,  2.95it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 122/6656 [01:16<1:36:53,  1.12it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 125/6656 [01:16<1:05:08,  1.67it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 128/6656 [01:16<44:57,  2.42it/s, loss=4.5667, mem=1.0GB]  Training:   2%|▏         | 131/6656 [01:22<1:30:04,  1.21it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 134/6656 [01:22<1:03:19,  1.72it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 137/6656 [01:22<45:10,  2.41it/s, loss=4.5667, mem=1.0GB]  Training:   2%|▏         | 140/6656 [01:22<32:27,  3.35it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 143/6656 [01:27<1:19:29,  1.37it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 145/6656 [01:27<1:03:01,  1.72it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 148/6656 [01:27<44:00,  2.46it/s, loss=4.5667, mem=1.0GB]  Training:   2%|▏         | 151/6656 [01:33<1:28:39,  1.22it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 154/6656 [01:33<1:02:16,  1.74it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 157/6656 [01:33<44:14,  2.45it/s, loss=4.5667, mem=1.0GB]  Training:   2%|▏         | 160/6656 [01:33<31:57,  3.39it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 163/6656 [01:38<1:17:55,  1.39it/s, loss=4.5667, mem=1.0GB]Training:   2%|▏         | 166/6656 [01:38<55:52,  1.94it/s, loss=4.5667, mem=1.0GB]  Training:   3%|▎         | 168/6656 [01:38<44:40,  2.42it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 171/6656 [01:43<1:29:55,  1.20it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 174/6656 [01:43<1:02:54,  1.72it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 176/6656 [01:44<50:02,  2.16it/s, loss=4.5667, mem=1.0GB]  Training:   3%|▎         | 179/6656 [01:44<34:46,  3.10it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 181/6656 [01:49<1:32:40,  1.16it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 184/6656 [01:49<1:02:34,  1.72it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 187/6656 [01:49<43:21,  2.49it/s, loss=4.5667, mem=1.0GB]  Training:   3%|▎         | 190/6656 [01:49<30:51,  3.49it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 193/6656 [01:54<1:18:25,  1.37it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 196/6656 [01:54<55:35,  1.94it/s, loss=4.5667, mem=1.0GB]  Training:   3%|▎         | 199/6656 [01:54<39:41,  2.71it/s, loss=4.5667, mem=1.0GB]Training:   3%|▎         | 199/6656 [02:00<39:41,  2.71it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 202/6656 [02:04<2:16:13,  1.27s/it, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 205/6656 [02:05<1:36:13,  1.12it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 208/6656 [02:05<1:08:22,  1.57it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 211/6656 [02:10<1:42:34,  1.05it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 214/6656 [02:10<1:13:04,  1.47it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 217/6656 [02:10<52:26,  2.05it/s, loss=4.5060, mem=0.8GB]  Training:   3%|▎         | 220/6656 [02:10<37:51,  2.83it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 223/6656 [02:15<1:21:04,  1.32it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 225/6656 [02:15<1:04:14,  1.67it/s, loss=4.5060, mem=0.8GB]Training:   3%|▎         | 228/6656 [02:15<44:44,  2.39it/s, loss=4.5060, mem=0.8GB]  Training:   3%|▎         | 231/6656 [02:20<1:27:24,  1.23it/s, loss=4.5060, mem=0.8GB]Training:   4%|▎         | 233/6656 [02:21<1:08:33,  1.56it/s, loss=4.5060, mem=0.8GB]Training:   4%|▎         | 236/6656 [02:21<47:01,  2.28it/s, loss=4.5060, mem=0.8GB]  Training:   4%|▎         | 238/6656 [02:21<37:15,  2.87it/s, loss=4.5060, mem=0.8GB]Training:   4%|▎         | 241/6656 [02:26<1:27:23,  1.22it/s, loss=4.5060, mem=0.8GB]Training:   4%|▎         | 244/6656 [02:26<1:00:03,  1.78it/s, loss=4.5060, mem=0.8GB]Training:   4%|▎         | 247/6656 [02:26<42:44,  2.50it/s, loss=4.5060, mem=0.8GB]  Training:   4%|▍         | 250/6656 [02:26<30:35,  3.49it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 253/6656 [02:31<1:17:40,  1.37it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 256/6656 [02:32<55:13,  1.93it/s, loss=4.5060, mem=0.8GB]  Training:   4%|▍         | 259/6656 [02:32<39:42,  2.69it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 261/6656 [02:37<1:34:28,  1.13it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 264/6656 [02:37<1:04:58,  1.64it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 267/6656 [02:37<45:55,  2.32it/s, loss=4.5060, mem=0.8GB]  Training:   4%|▍         | 270/6656 [02:37<33:02,  3.22it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 273/6656 [02:42<1:17:33,  1.37it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 275/6656 [02:43<1:01:13,  1.74it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 277/6656 [02:43<47:38,  2.23it/s, loss=4.5060, mem=0.8GB]  Training:   4%|▍         | 280/6656 [02:43<32:50,  3.24it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 282/6656 [02:48<1:31:35,  1.16it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 285/6656 [02:48<1:01:19,  1.73it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 288/6656 [02:48<42:25,  2.50it/s, loss=4.5060, mem=0.8GB]  Training:   4%|▍         | 290/6656 [02:48<34:01,  3.12it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 292/6656 [02:53<1:34:35,  1.12it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 295/6656 [02:53<1:02:27,  1.70it/s, loss=4.5060, mem=0.8GB]Training:   4%|▍         | 298/6656 [02:54<43:01,  2.46it/s, loss=4.5060, mem=0.8GB]  Training:   4%|▍         | 298/6656 [02:59<43:01,  2.46it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 300/6656 [02:59<1:36:54,  1.09it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 302/6656 [03:04<2:19:55,  1.32s/it, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 305/6656 [03:04<1:31:42,  1.15it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 308/6656 [03:04<1:02:11,  1.70it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 311/6656 [03:09<1:40:37,  1.05it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 314/6656 [03:09<1:10:05,  1.51it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 318/6656 [03:09<44:58,  2.35it/s, loss=4.5094, mem=1.0GB]  Training:   5%|▍         | 321/6656 [03:14<1:23:15,  1.27it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 323/6656 [03:14<1:06:44,  1.58it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 326/6656 [03:15<46:57,  2.25it/s, loss=4.5094, mem=1.0GB]  Training:   5%|▍         | 329/6656 [03:15<33:38,  3.14it/s, loss=4.5094, mem=1.0GB]Training:   5%|▍         | 332/6656 [03:20<1:18:23,  1.34it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 334/6656 [03:20<1:02:01,  1.70it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 336/6656 [03:20<48:15,  2.18it/s, loss=4.5094, mem=1.0GB]  Training:   5%|▌         | 339/6656 [03:20<32:59,  3.19it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 341/6656 [03:25<1:30:54,  1.16it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 344/6656 [03:25<1:00:49,  1.73it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 347/6656 [03:25<42:00,  2.50it/s, loss=4.5094, mem=1.0GB]  Training:   5%|▌         | 350/6656 [03:26<30:03,  3.50it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 353/6656 [03:31<1:16:58,  1.36it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 355/6656 [03:31<1:00:29,  1.74it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 358/6656 [03:31<41:52,  2.51it/s, loss=4.5094, mem=1.0GB]  Training:   5%|▌         | 361/6656 [03:36<1:25:45,  1.22it/s, loss=4.5094, mem=1.0GB]Training:   5%|▌         | 364/6656 [03:36<1:00:11,  1.74it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 367/6656 [03:36<42:49,  2.45it/s, loss=4.5094, mem=1.0GB]  Training:   6%|▌         | 369/6656 [03:36<34:21,  3.05it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 371/6656 [03:42<1:32:49,  1.13it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 374/6656 [03:42<1:02:18,  1.68it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 377/6656 [03:42<43:10,  2.42it/s, loss=4.5094, mem=1.0GB]  Training:   6%|▌         | 380/6656 [03:42<30:48,  3.39it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 382/6656 [03:47<1:24:07,  1.24it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 385/6656 [03:47<57:31,  1.82it/s, loss=4.5094, mem=1.0GB]  Training:   6%|▌         | 389/6656 [03:47<36:31,  2.86it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 392/6656 [03:52<1:17:38,  1.34it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 395/6656 [03:52<56:05,  1.86it/s, loss=4.5094, mem=1.0GB]  Training:   6%|▌         | 398/6656 [03:53<40:45,  2.56it/s, loss=4.5094, mem=1.0GB]Training:   6%|▌         | 398/6656 [03:58<40:45,  2.56it/s, loss=4.4684, mem=0.8GB]Training:   6%|▌         | 400/6656 [03:58<1:29:28,  1.17it/s, loss=4.4684, mem=0.8GB]Training:   6%|▌         | 402/6656 [04:02<2:10:06,  1.25s/it, loss=4.4684, mem=0.8GB]Training:   6%|▌         | 404/6656 [04:03<1:38:21,  1.06it/s, loss=4.4684, mem=0.8GB]Training:   6%|▌         | 407/6656 [04:03<1:04:50,  1.61it/s, loss=4.4684, mem=0.8GB]Training:   6%|▌         | 410/6656 [04:03<44:29,  2.34it/s, loss=4.4684, mem=0.8GB]  Training:   6%|▌         | 412/6656 [04:08<1:37:29,  1.07it/s, loss=4.4684, mem=0.8GB]Training:   6%|▌         | 415/6656 [04:08<1:05:24,  1.59it/s, loss=4.4684, mem=0.8GB]Training:   6%|▋         | 417/6656 [04:08<50:46,  2.05it/s, loss=4.4684, mem=0.8GB]  Training:   6%|▋         | 420/6656 [04:08<34:44,  2.99it/s, loss=4.4684, mem=0.8GB]Training:   6%|▋         | 422/6656 [04:13<1:31:26,  1.14it/s, loss=4.4684, mem=0.8GB]Training:   6%|▋         | 425/6656 [04:13<1:01:00,  1.70it/s, loss=4.4684, mem=0.8GB]Training:   6%|▋         | 428/6656 [04:14<42:00,  2.47it/s, loss=4.4684, mem=0.8GB]  Training:   6%|▋         | 431/6656 [04:19<1:24:24,  1.23it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 433/6656 [04:19<1:05:50,  1.58it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 436/6656 [04:19<45:14,  2.29it/s, loss=4.4684, mem=0.8GB]  Training:   7%|▋         | 439/6656 [04:19<31:48,  3.26it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 442/6656 [04:24<1:17:00,  1.34it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 446/6656 [04:24<49:20,  2.10it/s, loss=4.4684, mem=0.8GB]  Training:   7%|▋         | 449/6656 [04:24<36:27,  2.84it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 452/6656 [04:29<1:16:34,  1.35it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 454/6656 [04:29<1:01:13,  1.69it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 457/6656 [04:30<42:57,  2.41it/s, loss=4.4684, mem=0.8GB]  Training:   7%|▋         | 459/6656 [04:30<34:22,  3.00it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 461/6656 [04:35<1:31:09,  1.13it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 464/6656 [04:35<1:00:49,  1.70it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 466/6656 [04:35<46:59,  2.20it/s, loss=4.4684, mem=0.8GB]  Training:   7%|▋         | 468/6656 [04:35<36:05,  2.86it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 471/6656 [04:40<1:26:26,  1.19it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 473/6656 [04:40<1:05:42,  1.57it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 476/6656 [04:40<43:45,  2.35it/s, loss=4.4684, mem=0.8GB]  Training:   7%|▋         | 479/6656 [04:40<30:23,  3.39it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 482/6656 [04:46<1:17:03,  1.34it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 485/6656 [04:46<54:03,  1.90it/s, loss=4.4684, mem=0.8GB]  Training:   7%|▋         | 488/6656 [04:46<38:33,  2.67it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 491/6656 [04:51<1:21:12,  1.27it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 494/6656 [04:51<57:42,  1.78it/s, loss=4.4684, mem=0.8GB]  Training:   7%|▋         | 497/6656 [04:51<41:18,  2.49it/s, loss=4.4684, mem=0.8GB]Training:   7%|▋         | 497/6656 [04:56<41:18,  2.49it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 500/6656 [04:56<1:20:44,  1.27it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 502/6656 [05:01<1:59:23,  1.16s/it, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 504/6656 [05:01<1:31:42,  1.12it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 507/6656 [05:01<1:01:34,  1.66it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 511/6656 [05:07<1:28:48,  1.15it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 514/6656 [05:07<1:03:29,  1.61it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 517/6656 [05:07<45:39,  2.24it/s, loss=4.4426, mem=1.0GB]  Training:   8%|▊         | 520/6656 [05:07<33:11,  3.08it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 523/6656 [05:12<1:16:08,  1.34it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 526/6656 [05:12<54:57,  1.86it/s, loss=4.4426, mem=1.0GB]  Training:   8%|▊         | 528/6656 [05:12<43:55,  2.33it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 531/6656 [05:17<1:26:18,  1.18it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 534/6656 [05:18<1:00:54,  1.68it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 537/6656 [05:18<43:06,  2.37it/s, loss=4.4426, mem=1.0GB]  Training:   8%|▊         | 540/6656 [05:18<31:01,  3.29it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 543/6656 [05:23<1:14:59,  1.36it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 546/6656 [05:23<53:20,  1.91it/s, loss=4.4426, mem=1.0GB]  Training:   8%|▊         | 549/6656 [05:23<38:23,  2.65it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 552/6656 [05:28<1:18:29,  1.30it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 555/6656 [05:28<56:06,  1.81it/s, loss=4.4426, mem=1.0GB]  Training:   8%|▊         | 559/6656 [05:29<36:55,  2.75it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 562/6656 [05:34<1:15:36,  1.34it/s, loss=4.4426, mem=1.0GB]Training:   8%|▊         | 565/6656 [05:34<55:02,  1.84it/s, loss=4.4426, mem=1.0GB]  Training:   9%|▊         | 567/6656 [05:34<44:32,  2.28it/s, loss=4.4426, mem=1.0GB]Training:   9%|▊         | 570/6656 [05:34<31:44,  3.20it/s, loss=4.4426, mem=1.0GB]Training:   9%|▊         | 573/6656 [05:39<1:16:03,  1.33it/s, loss=4.4426, mem=1.0GB]Training:   9%|▊         | 576/6656 [05:39<53:52,  1.88it/s, loss=4.4426, mem=1.0GB]  Training:   9%|▊         | 579/6656 [05:39<38:40,  2.62it/s, loss=4.4426, mem=1.0GB]Training:   9%|▊         | 581/6656 [05:45<1:28:11,  1.15it/s, loss=4.4426, mem=1.0GB]Training:   9%|▉         | 583/6656 [05:45<1:08:08,  1.49it/s, loss=4.4426, mem=1.0GB]Training:   9%|▉         | 586/6656 [05:45<46:32,  2.17it/s, loss=4.4426, mem=1.0GB]  Training:   9%|▉         | 589/6656 [05:45<32:35,  3.10it/s, loss=4.4426, mem=1.0GB]Training:   9%|▉         | 591/6656 [05:50<1:26:06,  1.17it/s, loss=4.4426, mem=1.0GB]Training:   9%|▉         | 593/6656 [05:50<1:05:31,  1.54it/s, loss=4.4426, mem=1.0GB]Training:   9%|▉         | 597/6656 [05:50<39:19,  2.57it/s, loss=4.4426, mem=1.0GB]  Training:   9%|▉         | 597/6656 [05:55<39:19,  2.57it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 600/6656 [05:55<1:21:05,  1.24it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 602/6656 [06:00<1:58:31,  1.17s/it, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 604/6656 [06:00<1:30:35,  1.11it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 606/6656 [06:01<1:09:03,  1.46it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 609/6656 [06:01<45:37,  2.21it/s, loss=4.4178, mem=0.8GB]  Training:   9%|▉         | 611/6656 [06:06<1:39:02,  1.02it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 614/6656 [06:06<1:05:19,  1.54it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 616/6656 [06:06<50:58,  1.97it/s, loss=4.4178, mem=0.8GB]  Training:   9%|▉         | 619/6656 [06:06<34:31,  2.91it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 621/6656 [06:11<1:30:15,  1.11it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 624/6656 [06:11<1:00:09,  1.67it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 627/6656 [06:12<41:54,  2.40it/s, loss=4.4178, mem=0.8GB]  Training:   9%|▉         | 629/6656 [06:12<33:02,  3.04it/s, loss=4.4178, mem=0.8GB]Training:   9%|▉         | 631/6656 [06:17<1:29:45,  1.12it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 633/6656 [06:17<1:07:04,  1.50it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 636/6656 [06:17<44:01,  2.28it/s, loss=4.4178, mem=0.8GB]  Training:  10%|▉         | 640/6656 [06:17<27:19,  3.67it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 643/6656 [06:22<1:10:41,  1.42it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 646/6656 [06:22<50:23,  1.99it/s, loss=4.4178, mem=0.8GB]  Training:  10%|▉         | 649/6656 [06:22<36:16,  2.76it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 652/6656 [06:27<1:16:14,  1.31it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 654/6656 [06:28<1:00:21,  1.66it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 656/6656 [06:28<46:59,  2.13it/s, loss=4.4178, mem=0.8GB]  Training:  10%|▉         | 659/6656 [06:28<32:07,  3.11it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 662/6656 [06:33<1:16:42,  1.30it/s, loss=4.4178, mem=0.8GB]Training:  10%|▉         | 665/6656 [06:33<53:23,  1.87it/s, loss=4.4178, mem=0.8GB]  Training:  10%|█         | 668/6656 [06:33<37:42,  2.65it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 671/6656 [06:38<1:18:00,  1.28it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 674/6656 [06:38<55:19,  1.80it/s, loss=4.4178, mem=0.8GB]  Training:  10%|█         | 677/6656 [06:38<39:41,  2.51it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 680/6656 [06:38<29:08,  3.42it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 683/6656 [06:44<1:11:10,  1.40it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 685/6656 [06:44<56:43,  1.75it/s, loss=4.4178, mem=0.8GB]  Training:  10%|█         | 688/6656 [06:44<39:26,  2.52it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 691/6656 [06:49<1:20:47,  1.23it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 693/6656 [06:49<1:03:20,  1.57it/s, loss=4.4178, mem=0.8GB]Training:  10%|█         | 696/6656 [06:49<43:54,  2.26it/s, loss=4.4178, mem=0.8GB]  Training:  11%|█         | 699/6656 [06:49<31:02,  3.20it/s, loss=4.4178, mem=0.8GB]Training:  11%|█         | 699/6656 [06:54<31:02,  3.20it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 701/6656 [06:59<2:20:24,  1.41s/it, loss=4.4045, mem=1.0GB]Training:  11%|█         | 704/6656 [06:59<1:34:50,  1.05it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 707/6656 [07:00<1:05:29,  1.51it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 711/6656 [07:05<1:28:25,  1.12it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 714/6656 [07:05<1:04:39,  1.53it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 716/6656 [07:05<52:30,  1.89it/s, loss=4.4045, mem=1.0GB]  Training:  11%|█         | 720/6656 [07:05<33:42,  2.94it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 722/6656 [07:10<1:20:22,  1.23it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 725/6656 [07:10<56:29,  1.75it/s, loss=4.4045, mem=1.0GB]  Training:  11%|█         | 728/6656 [07:10<39:59,  2.47it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 731/6656 [07:16<1:18:59,  1.25it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 734/6656 [07:16<55:56,  1.76it/s, loss=4.4045, mem=1.0GB]  Training:  11%|█         | 737/6656 [07:16<40:02,  2.46it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 740/6656 [07:16<30:09,  3.27it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 742/6656 [07:21<1:19:28,  1.24it/s, loss=4.4045, mem=1.0GB]Training:  11%|█         | 745/6656 [07:21<55:01,  1.79it/s, loss=4.4045, mem=1.0GB]  Training:  11%|█         | 748/6656 [07:21<38:38,  2.55it/s, loss=4.4045, mem=1.0GB]Training:  11%|█▏        | 751/6656 [07:26<1:18:09,  1.26it/s, loss=4.4045, mem=1.0GB]Training:  11%|█▏        | 754/6656 [07:26<55:12,  1.78it/s, loss=4.4045, mem=1.0GB]  Training:  11%|█▏        | 757/6656 [07:27<39:25,  2.49it/s, loss=4.4045, mem=1.0GB]Training:  11%|█▏        | 760/6656 [07:27<28:31,  3.44it/s, loss=4.4045, mem=1.0GB]Training:  11%|█▏        | 763/6656 [07:32<1:11:19,  1.38it/s, loss=4.4045, mem=1.0GB]Training:  12%|█▏        | 766/6656 [07:32<50:53,  1.93it/s, loss=4.4045, mem=1.0GB]  Training:  12%|█▏        | 768/6656 [07:32<40:40,  2.41it/s, loss=4.4045, mem=1.0GB]Training:  12%|█▏        | 770/6656 [07:32<32:21,  3.03it/s, loss=4.4045, mem=1.0GB]Training:  12%|█▏        | 770/6656 [07:42<32:21,  3.03it/s, loss=4.4045, mem=1.0GB]                                                                                      → OOM detected, splitting batch (16 → 8 + 8)
+Traceback (most recent call last):
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 322, in process_single_batch_safely
+    logits = self.model(batch.x, batch.edge_index, batch.batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/model/ggnn_cwe_classifier.py", line 168, in forward
+    h_new = ggnn_layer(h, edge_index)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch_geometric/nn/conv/gated_graph_conv.py", line 80, in forward
+    x = self.rnn(m, x)
+        ^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/venv-2.4/lib/python3.11/site-packages/torch/nn/modules/rnn.py", line 1477, in forward
+    ret = _VF.gru_cell(
+          ^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 174.00 MiB. GPU 0 has a total capacity of 10.75 GiB of which 3.56 MiB is free. Including non-PyTorch memory, this process has 10.74 GiB memory in use. Of the allocated memory 9.95 GiB is allocated by PyTorch, and 609.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 1187, in <module>
+    main()
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 1182, in main
+    run_experiment(config, exp_dir, exp_manager)
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 1085, in run_experiment
+    trainer.train(epochs=config['epochs'], early_stopping_patience=config['early_stopping_patience'])
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 595, in train
+    train_loss, train_acc = self.train_epoch()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 484, in train_epoch
+    raise e
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 442, in train_epoch
+    loss, preds, labels = self.process_single_batch_safely(batch)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 345, in process_single_batch_safely
+    sub_batches = self._split_batch(batch, sub_batch_size)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/ggnn_cwe_classifier_training_pipelineV2.py", line 385, in _split_batch
+    node_mask = torch.isin(batch.batch, indices)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument test_elements in method wrapper_CUDA_isin_Tensor_Tensor)
+
+==========================================
+ERROR: Training failed with exit code 1
+==========================================
+Check logs for details:
+  /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/outputs/experiments/exp1_baselinev2/logs/training.log
+==========================================
+
+Cleaning up...
+GPU monitoring stopped

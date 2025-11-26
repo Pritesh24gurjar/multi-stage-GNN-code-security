@@ -1,0 +1,727 @@
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+    raise ValueError(
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+Traceback (most recent call last):
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/scripts/batch_feature_build.py", line 18, in <module>
+    builder = BuildNodeFeaturesAccelerated(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/src/ipag_gin/graph/features_accelerated.py", line 24, in __init__
+    self.model = RobertaModel.from_pretrained("microsoft/graphcodebert-base")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "/mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/venv/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+[2025-11-22T03:42:34.208] error: *** JOB 44471 ON classt24 CANCELLED AT 2025-11-22T03:42:34 DUE to SIGNAL Terminated ***

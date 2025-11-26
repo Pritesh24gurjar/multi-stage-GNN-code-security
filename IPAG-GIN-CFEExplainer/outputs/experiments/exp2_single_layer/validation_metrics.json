@@ -1,0 +1,10 @@
+{
+    "accuracy": 0.49700598802395207,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "auc": 0.5862019506597819,
+    "fpr": 0.0,
+    "fnr": 1.0,
+    "fairness_score": 0.0
+}
