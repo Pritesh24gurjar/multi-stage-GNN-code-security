@@ -1,0 +1,122 @@
+==========================================
+GGNN CWE Top-30 Classification Experiment
+Started at: Tue Nov 25 16:14:18 EST 2025
+SLURM Job ID: 44852
+Node List: classt03
+==========================================
+
+Python version:
+Python 3.11.5
+
+GPU Memory Info (initial):
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+11264 MiB, 0 MiB, 11004 MiB
+
+Using data from:
+  Graphs:   /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  Metadata: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+
+==========================================
+Experiment: exp3_top30_wider_256hid
+==========================================
+Experiment 3
+Approximate parameter count: Core GGNN ≈ 1.25M parameters (3·6·256² + readout). Largest config so far but still far below 33M.
+Expected behaviour: Wider layers increase representation capacity, improving peak performance if data volume is sufficient. Likely higher precision but also stronger overfitting tendencies. Fairness may degrade if the model memorizes subtle biases.
+
+Model Configuration:
+  Embedding Dim:     128
+  Hidden Dim:        256
+  GGNN Layers:       3
+  Propagation Steps: 4
+  Dropout:           0.3
+
+Training Configuration:
+  Batch Size:        4
+  Epochs:            100
+  Learning Rate:     0.001
+  Weight Decay:      1e-5
+  Num Workers:       4
+  Seed:              44
+
+Data Splits:
+  Train Ratio:       0.8
+  Val Ratio:         0.1
+  Test Ratio:        0.1
+
+Checkpoint directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp3_top30_wider_256hid
+
+==========================================
+Starting Training
+==========================================
+
+Using device: cuda
+
+Loading processed graphs...
+Loaded 149980 graphs from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+Loading metadata...
+  vocab_sizes: {'node_type': 5, 'original_type': 223, 'label': 520106}
+  total_samples (metadata): 149980
+  idx_to_cwe entries: 91
+
+Filtering to top 30 CWE classes by frequency...
+Top 30 classes (original indices and counts):
+  CWE_idx 1: 26255 samples
+  CWE_idx 14: 19940 samples
+  CWE_idx 45: 14792 samples
+  CWE_idx 21: 12451 samples
+  CWE_idx 49: 9658 samples
+  CWE_idx 15: 8619 samples
+  CWE_idx 3: 7656 samples
+  CWE_idx 10: 6378 samples
+  CWE_idx 42: 6073 samples
+  CWE_idx 52: 4559 samples
+  CWE_idx 12: 3643 samples
+  CWE_idx 19: 3000 samples
+  CWE_idx 79: 2918 samples
+  CWE_idx 24: 2425 samples
+  CWE_idx 69: 1480 samples
+  CWE_idx 29: 1478 samples
+  CWE_idx 46: 1282 samples
+  CWE_idx 77: 1205 samples
+  CWE_idx 57: 1049 samples
+  CWE_idx 60: 1026 samples
+  CWE_idx 48: 993 samples
+  CWE_idx 22: 930 samples
+  CWE_idx 47: 916 samples
+  CWE_idx 67: 908 samples
+  CWE_idx 80: 877 samples
+  CWE_idx 83: 826 samples
+  CWE_idx 43: 740 samples
+  CWE_idx 11: 723 samples
+  CWE_idx 7: 684 samples
+  CWE_idx 17: 683 samples
+Kept 144167 graphs out of 149980 after top-30 filtering.
+New num_classes (top-30 only): 30
+
+Converting graphs to PyG Data objects...
+Converted 144167 graphs, skipped 0 empty graphs.
+
+Creating stratified train/val/test split...
+Split sizes -> train: 115323, val: 14403, test: 14441
+
+Initializing GGNN model...
+
+Starting training...
+Epoch 001 | Train Loss: 2.5347, Train Acc: 0.2551, Train F1 (macro): 0.0513 | Val Loss: 2.3166, Val Acc: 0.3054, Val F1 (macro): 0.0649
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp3_top30_wider_256hid/best_model.pt
+
+==========================================
+Training script exited with code: 1
+==========================================
+
+ERROR: Training failed with exit code 1
+
+Final GPU Memory:
+memory.used [MiB], memory.free [MiB]
+0 MiB, 11004 MiB
+
+Completed at: Tue Nov 25 16:40:59 EST 2025
+==========================================
+
+Job information saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp3_top30_wider_256hid/job_info.txt
+

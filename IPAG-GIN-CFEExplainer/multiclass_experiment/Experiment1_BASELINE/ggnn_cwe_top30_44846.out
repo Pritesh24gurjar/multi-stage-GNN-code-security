@@ -1,0 +1,267 @@
+==========================================
+GGNN CWE Top-30 Classification Experiment
+Started at: Tue Nov 25 14:57:53 EST 2025
+SLURM Job ID: 44846
+Node List: classt19
+==========================================
+
+Python version:
+Python 3.11.5
+
+GPU Memory Info (initial):
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+11264 MiB, 0 MiB, 11004 MiB
+
+Using data from:
+  Graphs:   /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  Metadata: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+
+==========================================
+Experiment: exp1_top30_baseline
+==========================================
+Experiment 1
+Approximate parameter count: Core GGNN ≈ 0.31M parameters (3·6·128² + readout). Total model comfortably below several million parameters and far under the 33M limit.
+Expected behaviour: This baseline provides moderate width and depth with stable optimization. It should offer reliable convergence and define the reference F1/AUC and fairness profile for all other experiments.
+
+Model Configuration:
+  Embedding Dim:   64
+  Hidden Dim:      128
+  GGNN Layers:     3
+  Propagation Steps: 4
+  Dropout:         0.3
+
+Training Configuration:
+  Batch Size:      8
+  Epochs:          100
+  Learning Rate:   0.001
+  Weight Decay:    1e-5
+  Num Workers:     4
+  Seed:            42
+
+Data Splits:
+  Train Ratio:     0.8
+  Val Ratio:       0.1
+  Test Ratio:      0.1
+
+Checkpoint directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline
+
+==========================================
+Starting Training
+==========================================
+
+Using device: cuda
+
+Loading processed graphs...
+Loaded 149980 graphs from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+Loading metadata...
+  vocab_sizes: {'node_type': 5, 'original_type': 223, 'label': 520106}
+  total_samples (metadata): 149980
+  idx_to_cwe entries: 91
+
+Filtering to top 30 CWE classes by frequency...
+Top 30 classes (original indices and counts):
+  CWE_idx 1: 26255 samples
+  CWE_idx 14: 19940 samples
+  CWE_idx 45: 14792 samples
+  CWE_idx 21: 12451 samples
+  CWE_idx 49: 9658 samples
+  CWE_idx 15: 8619 samples
+  CWE_idx 3: 7656 samples
+  CWE_idx 10: 6378 samples
+  CWE_idx 42: 6073 samples
+  CWE_idx 52: 4559 samples
+  CWE_idx 12: 3643 samples
+  CWE_idx 19: 3000 samples
+  CWE_idx 79: 2918 samples
+  CWE_idx 24: 2425 samples
+  CWE_idx 69: 1480 samples
+  CWE_idx 29: 1478 samples
+  CWE_idx 46: 1282 samples
+  CWE_idx 77: 1205 samples
+  CWE_idx 57: 1049 samples
+  CWE_idx 60: 1026 samples
+  CWE_idx 48: 993 samples
+  CWE_idx 22: 930 samples
+  CWE_idx 47: 916 samples
+  CWE_idx 67: 908 samples
+  CWE_idx 80: 877 samples
+  CWE_idx 83: 826 samples
+  CWE_idx 43: 740 samples
+  CWE_idx 11: 723 samples
+  CWE_idx 7: 684 samples
+  CWE_idx 17: 683 samples
+Kept 144167 graphs out of 149980 after top-30 filtering.
+New num_classes (top-30 only): 30
+
+Converting graphs to PyG Data objects...
+Converted 144167 graphs, skipped 0 empty graphs.
+
+Creating stratified train/val/test split...
+Split sizes -> train: 115323, val: 14403, test: 14441
+
+Initializing GGNN model...
+
+Starting training...
+Epoch 001 | Train Loss: 2.4220, Train Acc: 0.2918, Train F1 (macro): 0.0898 | Val Loss: 1.9448, Val Acc: 0.4207, Val F1 (macro): 0.1550
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 002 | Train Loss: 1.7661, Train Acc: 0.4891, Train F1 (macro): 0.2425 | Val Loss: 1.6336, Val Acc: 0.5406, Val F1 (macro): 0.3098
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 003 | Train Loss: 1.5389, Train Acc: 0.5648, Train F1 (macro): 0.3410 | Val Loss: 1.4268, Val Acc: 0.6045, Val F1 (macro): 0.4329
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 004 | Train Loss: 1.3827, Train Acc: 0.6166, Train F1 (macro): 0.4479 | Val Loss: 1.3049, Val Acc: 0.6444, Val F1 (macro): 0.5556
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 005 | Train Loss: 1.2996, Train Acc: 0.6421, Train F1 (macro): 0.5068 | Val Loss: 1.3344, Val Acc: 0.6336, Val F1 (macro): 0.5729
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 006 | Train Loss: 1.2307, Train Acc: 0.6648, Train F1 (macro): 0.5436 | Val Loss: 1.3057, Val Acc: 0.6516, Val F1 (macro): 0.6064
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 007 | Train Loss: 1.1994, Train Acc: 0.6709, Train F1 (macro): 0.5604 | Val Loss: 1.2002, Val Acc: 0.6685, Val F1 (macro): 0.6229
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 008 | Train Loss: 1.1396, Train Acc: 0.6881, Train F1 (macro): 0.5848 | Val Loss: 1.2029, Val Acc: 0.6778, Val F1 (macro): 0.6536
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 009 | Train Loss: 1.1114, Train Acc: 0.6959, Train F1 (macro): 0.6088 | Val Loss: 1.1810, Val Acc: 0.6766, Val F1 (macro): 0.6618
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 010 | Train Loss: 1.0444, Train Acc: 0.7131, Train F1 (macro): 0.6409 | Val Loss: 1.1547, Val Acc: 0.6961, Val F1 (macro): 0.6895
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 011 | Train Loss: 0.9921, Train Acc: 0.7274, Train F1 (macro): 0.6619 | Val Loss: 1.0971, Val Acc: 0.7010, Val F1 (macro): 0.6922
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 012 | Train Loss: 0.9557, Train Acc: 0.7377, Train F1 (macro): 0.6794 | Val Loss: 1.1437, Val Acc: 0.6980, Val F1 (macro): 0.6987
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 013 | Train Loss: 0.9250, Train Acc: 0.7462, Train F1 (macro): 0.6940 | Val Loss: 1.0554, Val Acc: 0.7083, Val F1 (macro): 0.7096
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 014 | Train Loss: 0.9023, Train Acc: 0.7516, Train F1 (macro): 0.7051 | Val Loss: 1.1518, Val Acc: 0.6947, Val F1 (macro): 0.7027
+Epoch 015 | Train Loss: 0.8761, Train Acc: 0.7583, Train F1 (macro): 0.7127 | Val Loss: 1.1762, Val Acc: 0.6999, Val F1 (macro): 0.7024
+Epoch 016 | Train Loss: 0.8534, Train Acc: 0.7629, Train F1 (macro): 0.7188 | Val Loss: 1.1150, Val Acc: 0.7048, Val F1 (macro): 0.6960
+Epoch 017 | Train Loss: 0.8323, Train Acc: 0.7686, Train F1 (macro): 0.7261 | Val Loss: 1.1036, Val Acc: 0.7060, Val F1 (macro): 0.6979
+Epoch 018 | Train Loss: 0.8294, Train Acc: 0.7702, Train F1 (macro): 0.7290 | Val Loss: 1.0305, Val Acc: 0.7157, Val F1 (macro): 0.7066
+Epoch 019 | Train Loss: 0.8166, Train Acc: 0.7730, Train F1 (macro): 0.7290 | Val Loss: 1.0697, Val Acc: 0.7176, Val F1 (macro): 0.7117
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 020 | Train Loss: 0.8064, Train Acc: 0.7755, Train F1 (macro): 0.7365 | Val Loss: 1.0421, Val Acc: 0.7167, Val F1 (macro): 0.7106
+Epoch 021 | Train Loss: 0.7911, Train Acc: 0.7788, Train F1 (macro): 0.7375 | Val Loss: 1.0457, Val Acc: 0.7226, Val F1 (macro): 0.7212
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 022 | Train Loss: 0.7811, Train Acc: 0.7836, Train F1 (macro): 0.7438 | Val Loss: 1.0797, Val Acc: 0.7162, Val F1 (macro): 0.7111
+Epoch 023 | Train Loss: 0.7686, Train Acc: 0.7854, Train F1 (macro): 0.7473 | Val Loss: 1.0601, Val Acc: 0.7149, Val F1 (macro): 0.7091
+Epoch 024 | Train Loss: 0.7677, Train Acc: 0.7861, Train F1 (macro): 0.7478 | Val Loss: 1.2094, Val Acc: 0.6952, Val F1 (macro): 0.6969
+Epoch 025 | Train Loss: 0.7593, Train Acc: 0.7878, Train F1 (macro): 0.7500 | Val Loss: 1.3306, Val Acc: 0.6886, Val F1 (macro): 0.6796
+Epoch 026 | Train Loss: 0.7539, Train Acc: 0.7897, Train F1 (macro): 0.7516 | Val Loss: 1.1659, Val Acc: 0.7053, Val F1 (macro): 0.6971
+Epoch 027 | Train Loss: 0.7529, Train Acc: 0.7899, Train F1 (macro): 0.7490 | Val Loss: 1.2644, Val Acc: 0.6898, Val F1 (macro): 0.6694
+Epoch 028 | Train Loss: 0.7435, Train Acc: 0.7918, Train F1 (macro): 0.7541 | Val Loss: 1.3665, Val Acc: 0.6952, Val F1 (macro): 0.6625
+Epoch 029 | Train Loss: 0.7402, Train Acc: 0.7921, Train F1 (macro): 0.7556 | Val Loss: 1.0200, Val Acc: 0.7199, Val F1 (macro): 0.7201
+Epoch 030 | Train Loss: 0.7359, Train Acc: 0.7934, Train F1 (macro): 0.7569 | Val Loss: 1.0840, Val Acc: 0.7137, Val F1 (macro): 0.7172
+Epoch 031 | Train Loss: 0.7231, Train Acc: 0.7969, Train F1 (macro): 0.7602 | Val Loss: 1.1130, Val Acc: 0.7076, Val F1 (macro): 0.7024
+Epoch 032 | Train Loss: 0.7189, Train Acc: 0.7979, Train F1 (macro): 0.7629 | Val Loss: 1.0763, Val Acc: 0.7092, Val F1 (macro): 0.7060
+Epoch 033 | Train Loss: 0.7143, Train Acc: 0.8002, Train F1 (macro): 0.7654 | Val Loss: 1.0613, Val Acc: 0.7262, Val F1 (macro): 0.7212
+Epoch 034 | Train Loss: 0.7106, Train Acc: 0.8002, Train F1 (macro): 0.7633 | Val Loss: 1.0323, Val Acc: 0.7224, Val F1 (macro): 0.7209
+Epoch 035 | Train Loss: 0.6981, Train Acc: 0.8045, Train F1 (macro): 0.7697 | Val Loss: 1.0797, Val Acc: 0.7173, Val F1 (macro): 0.7073
+Epoch 036 | Train Loss: 0.6968, Train Acc: 0.8041, Train F1 (macro): 0.7706 | Val Loss: 1.0606, Val Acc: 0.7175, Val F1 (macro): 0.7163
+Epoch 037 | Train Loss: 0.6886, Train Acc: 0.8062, Train F1 (macro): 0.7749 | Val Loss: 1.0451, Val Acc: 0.7160, Val F1 (macro): 0.7194
+Epoch 038 | Train Loss: 0.6856, Train Acc: 0.8064, Train F1 (macro): 0.7736 | Val Loss: 1.1342, Val Acc: 0.7110, Val F1 (macro): 0.7059
+Epoch 039 | Train Loss: 0.6890, Train Acc: 0.8053, Train F1 (macro): 0.7714 | Val Loss: 1.1744, Val Acc: 0.7103, Val F1 (macro): 0.7152
+Epoch 040 | Train Loss: 0.6877, Train Acc: 0.8062, Train F1 (macro): 0.7728 | Val Loss: 1.0385, Val Acc: 0.7226, Val F1 (macro): 0.7130
+Epoch 041 | Train Loss: 0.6952, Train Acc: 0.8022, Train F1 (macro): 0.7687 | Val Loss: 1.0374, Val Acc: 0.7216, Val F1 (macro): 0.7082
+Epoch 042 | Train Loss: 0.6811, Train Acc: 0.8064, Train F1 (macro): 0.7750 | Val Loss: 1.0638, Val Acc: 0.7255, Val F1 (macro): 0.7204
+Epoch 043 | Train Loss: 0.6709, Train Acc: 0.8104, Train F1 (macro): 0.7783 | Val Loss: 1.0807, Val Acc: 0.7139, Val F1 (macro): 0.7133
+Epoch 044 | Train Loss: 0.6693, Train Acc: 0.8105, Train F1 (macro): 0.7794 | Val Loss: 1.0925, Val Acc: 0.7244, Val F1 (macro): 0.7238
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 045 | Train Loss: 0.6719, Train Acc: 0.8090, Train F1 (macro): 0.7788 | Val Loss: 1.0158, Val Acc: 0.7301, Val F1 (macro): 0.7210
+Epoch 046 | Train Loss: 0.6645, Train Acc: 0.8116, Train F1 (macro): 0.7839 | Val Loss: 1.0433, Val Acc: 0.7283, Val F1 (macro): 0.7162
+Epoch 047 | Train Loss: 0.6639, Train Acc: 0.8112, Train F1 (macro): 0.7834 | Val Loss: 1.0400, Val Acc: 0.7282, Val F1 (macro): 0.7170
+Epoch 048 | Train Loss: 0.6585, Train Acc: 0.8118, Train F1 (macro): 0.7838 | Val Loss: 0.9803, Val Acc: 0.7314, Val F1 (macro): 0.7296
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/best_model.pt
+Epoch 049 | Train Loss: 0.6575, Train Acc: 0.8124, Train F1 (macro): 0.7835 | Val Loss: 1.0013, Val Acc: 0.7253, Val F1 (macro): 0.7191
+Epoch 050 | Train Loss: 0.6505, Train Acc: 0.8129, Train F1 (macro): 0.7849 | Val Loss: 1.0644, Val Acc: 0.7210, Val F1 (macro): 0.7202
+Epoch 051 | Train Loss: 0.6559, Train Acc: 0.8125, Train F1 (macro): 0.7820 | Val Loss: 1.0997, Val Acc: 0.7233, Val F1 (macro): 0.7183
+Epoch 052 | Train Loss: 0.6564, Train Acc: 0.8125, Train F1 (macro): 0.7853 | Val Loss: 1.0264, Val Acc: 0.7215, Val F1 (macro): 0.7192
+Epoch 053 | Train Loss: 0.6512, Train Acc: 0.8150, Train F1 (macro): 0.7867 | Val Loss: 1.0534, Val Acc: 0.7177, Val F1 (macro): 0.7170
+Epoch 054 | Train Loss: 0.6544, Train Acc: 0.8135, Train F1 (macro): 0.7833 | Val Loss: 0.9968, Val Acc: 0.7287, Val F1 (macro): 0.7249
+Epoch 055 | Train Loss: 0.6413, Train Acc: 0.8173, Train F1 (macro): 0.7897 | Val Loss: 1.1863, Val Acc: 0.7116, Val F1 (macro): 0.7036
+Epoch 056 | Train Loss: nan, Train Acc: 0.4768, Train F1 (macro): 0.4950 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 057 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 058 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 059 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 060 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 061 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 062 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 063 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 064 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 065 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 066 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 067 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 068 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 069 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 070 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 071 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 072 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 073 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 074 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 075 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 076 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 077 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 078 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 079 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 080 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 081 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 082 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 083 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 084 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 085 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 086 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 087 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 088 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 089 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 090 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 091 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 092 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 093 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 094 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 095 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 096 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 097 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 098 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 099 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 100 | Train Loss: nan, Train Acc: 0.1821, Train F1 (macro): 0.0103 | Val Loss: nan, Val Acc: 0.1823, Val F1 (macro): 0.0103
+
+Loading best checkpoint for final test evaluation...
+Loaded checkpoint from epoch 48
+
+=== FINAL TEST METRICS ===
+Test Loss: 1.0062
+Test Acc:  0.7245
+Test Macro Precision: 0.7719
+Test Macro Recall:    0.6924
+Test Macro F1:        0.7235
+
+=== RESPONSIBLE AI METRICS (PER-CLASS & DISPARITIES) ===
+Overall: {'accuracy': 0.7245343327522278, 'macro_precision': 0.7719044089317322, 'macro_recall': 0.6923605799674988, 'macro_f1': 0.7234585285186768}
+Disparity: {'f1_min': 0.5454545617103577, 'f1_max': 0.8541666865348816, 'f1_diff': 0.3087121248245239, 'f1_ratio': 1.565972183268185, 'recall_min': 0.43478259444236755, 'recall_max': 0.8369565010070801, 'recall_diff': 0.4021739065647125, 'recall_ratio': 1.9249999711477015}
+
+Lowest 5 classes by F1:
+  CWE-17 (id=28): support=69, precision=0.732, recall=0.435, f1=0.545
+  CWE-400 (id=16): support=129, precision=0.569, recall=0.574, f1=0.571
+  CWE-415 (id=20): support=100, precision=0.918, recall=0.450, f1=0.604
+  CWE-362 (id=8): support=608, precision=0.658, recall=0.586, f1=0.620
+  CWE-264 (id=3): support=1246, precision=0.519, recall=0.821, f1=0.636
+
+Highest 5 classes by F1:
+  CWE-22 (id=29): support=69, precision=0.860, recall=0.710, f1=0.778
+  CWE-59 (id=18): support=106, precision=0.904, recall=0.708, f1=0.794
+  CWE-404 (id=22): support=93, precision=0.857, recall=0.774, f1=0.814
+  CWE-704 (id=23): support=92, precision=0.856, recall=0.837, f1=0.846
+  CWE-617 (id=19): support=104, precision=0.932, recall=0.788, f1=0.854
+
+Responsible AI report saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/responsible_ai_report.json
+
+==========================================
+Training script exited with code: 0
+==========================================
+
+✓ Training completed successfully
+
+Final GPU Memory:
+memory.used [MiB], memory.free [MiB]
+0 MiB, 11004 MiB
+
+Completed at: Wed Nov 26 01:00:39 EST 2025
+==========================================
+
+Job information saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/job_info.txt
+

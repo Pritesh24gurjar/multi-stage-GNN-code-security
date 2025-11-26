@@ -1,0 +1,186 @@
+==========================================
+GGNN CWE Top-30 Classification Experiment
+Started at: Tue Nov 25 17:01:42 EST 2025
+SLURM Job ID: 44865
+Node List: classt03
+==========================================
+
+Python version:
+Python 3.11.5
+
+GPU Memory Info (initial):
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+11264 MiB, 0 MiB, 11004 MiB
+
+Using data from:
+  Graphs:   /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  Metadata: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+
+==========================================
+Experiment: exp2_top30_deeper_6layers
+==========================================
+Experiment 2
+Approximate parameter count: Core GGNN ≈ 0.61M parameters (6·6·128² + readout). Still easily within budget (<10M even with embeddings/heads).
+Expected behaviour: Doubling the depth enables stronger multi-hop relational reasoning. You may see higher recall/AUC but also greater overfitting risk. Fairness metrics may shift if deeper layers capture spurious correlations.
+
+Model Configuration:
+  Embedding Dim:     64
+  Hidden Dim:        128
+  GGNN Layers:       6
+  Propagation Steps: 4
+  Dropout:           0.3
+
+Training Configuration:
+  Batch Size:        4
+  Epochs:            100
+  Learning Rate:     0.001
+  Weight Decay:      1e-5
+  Num Workers:       4
+  Seed:              43
+
+Data Splits:
+  Train Ratio:       0.8
+  Val Ratio:         0.1
+  Test Ratio:        0.1
+
+Checkpoint directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers
+
+==========================================
+Starting Training
+==========================================
+
+Using device: cuda
+
+Loading processed graphs...
+Loaded 149980 graphs from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+Loading metadata...
+  vocab_sizes: {'node_type': 5, 'original_type': 223, 'label': 520106}
+  total_samples (metadata): 149980
+  idx_to_cwe entries: 91
+
+Filtering to top 30 CWE classes by frequency...
+Top 30 classes (original indices and counts):
+  CWE_idx 1: 26255 samples
+  CWE_idx 14: 19940 samples
+  CWE_idx 45: 14792 samples
+  CWE_idx 21: 12451 samples
+  CWE_idx 49: 9658 samples
+  CWE_idx 15: 8619 samples
+  CWE_idx 3: 7656 samples
+  CWE_idx 10: 6378 samples
+  CWE_idx 42: 6073 samples
+  CWE_idx 52: 4559 samples
+  CWE_idx 12: 3643 samples
+  CWE_idx 19: 3000 samples
+  CWE_idx 79: 2918 samples
+  CWE_idx 24: 2425 samples
+  CWE_idx 69: 1480 samples
+  CWE_idx 29: 1478 samples
+  CWE_idx 46: 1282 samples
+  CWE_idx 77: 1205 samples
+  CWE_idx 57: 1049 samples
+  CWE_idx 60: 1026 samples
+  CWE_idx 48: 993 samples
+  CWE_idx 22: 930 samples
+  CWE_idx 47: 916 samples
+  CWE_idx 67: 908 samples
+  CWE_idx 80: 877 samples
+  CWE_idx 83: 826 samples
+  CWE_idx 43: 740 samples
+  CWE_idx 11: 723 samples
+  CWE_idx 7: 684 samples
+  CWE_idx 17: 683 samples
+Kept 144167 graphs out of 149980 after top-30 filtering.
+New num_classes (top-30 only): 30
+
+Converting graphs to PyG Data objects...
+Converted 144167 graphs, skipped 0 empty graphs.
+
+Creating stratified train/val/test split...
+Split sizes -> train: 115323, val: 14403, test: 14441
+
+Initializing GGNN model...
+
+Starting training...
+Epoch 001 | Train Loss: 2.6488, Train Acc: 0.2254, Train F1 (macro): 0.0374 | Val Loss: 2.5082, Val Acc: 0.2786, Val F1 (macro): 0.0534
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 002 | Train Loss: 2.3832, Train Acc: 0.2999, Train F1 (macro): 0.0640 | Val Loss: 2.3835, Val Acc: 0.3021, Val F1 (macro): 0.0669
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 003 | Train Loss: 2.3150, Train Acc: 0.3194, Train F1 (macro): 0.0794 | Val Loss: 2.3828, Val Acc: 0.3037, Val F1 (macro): 0.0672
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 004 | Train Loss: 2.2568, Train Acc: 0.3375, Train F1 (macro): 0.0916 | Val Loss: 2.2349, Val Acc: 0.3351, Val F1 (macro): 0.0999
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 005 | Train Loss: 2.0979, Train Acc: 0.3875, Train F1 (macro): 0.1476 | Val Loss: 2.2857, Val Acc: 0.3777, Val F1 (macro): 0.1910
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 006 | Train Loss: 1.8988, Train Acc: 0.4556, Train F1 (macro): 0.2516 | Val Loss: 1.8510, Val Acc: 0.4641, Val F1 (macro): 0.3112
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 007 | Train Loss: 1.7830, Train Acc: 0.4907, Train F1 (macro): 0.3130 | Val Loss: 1.7958, Val Acc: 0.4934, Val F1 (macro): 0.3679
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 008 | Train Loss: 1.7050, Train Acc: 0.5188, Train F1 (macro): 0.3526 | Val Loss: 1.6109, Val Acc: 0.5473, Val F1 (macro): 0.4548
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 009 | Train Loss: 1.6412, Train Acc: 0.5415, Train F1 (macro): 0.3917 | Val Loss: 1.6408, Val Acc: 0.5611, Val F1 (macro): 0.4753
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 010 | Train Loss: 1.5940, Train Acc: 0.5550, Train F1 (macro): 0.4165 | Val Loss: 1.6069, Val Acc: 0.5718, Val F1 (macro): 0.5077
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 011 | Train Loss: 1.5571, Train Acc: 0.5682, Train F1 (macro): 0.4498 | Val Loss: 1.8356, Val Acc: 0.5234, Val F1 (macro): 0.4840
+Epoch 012 | Train Loss: 1.5070, Train Acc: 0.5831, Train F1 (macro): 0.4817 | Val Loss: 1.5919, Val Acc: 0.5928, Val F1 (macro): 0.5493
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 013 | Train Loss: 1.4762, Train Acc: 0.5907, Train F1 (macro): 0.4959 | Val Loss: 1.5782, Val Acc: 0.6011, Val F1 (macro): 0.5642
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 014 | Train Loss: 1.4397, Train Acc: 0.6018, Train F1 (macro): 0.5093 | Val Loss: 1.4716, Val Acc: 0.6251, Val F1 (macro): 0.5861
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 015 | Train Loss: 1.4100, Train Acc: 0.6108, Train F1 (macro): 0.5235 | Val Loss: 1.6306, Val Acc: 0.6038, Val F1 (macro): 0.5550
+Epoch 016 | Train Loss: 1.3818, Train Acc: 0.6184, Train F1 (macro): 0.5341 | Val Loss: 1.6008, Val Acc: 0.6047, Val F1 (macro): 0.5933
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 017 | Train Loss: 1.3637, Train Acc: 0.6249, Train F1 (macro): 0.5443 | Val Loss: 1.4509, Val Acc: 0.6279, Val F1 (macro): 0.6097
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 018 | Train Loss: 1.3435, Train Acc: 0.6278, Train F1 (macro): 0.5510 | Val Loss: 1.6653, Val Acc: 0.6054, Val F1 (macro): 0.5413
+Epoch 019 | Train Loss: 1.3385, Train Acc: 0.6300, Train F1 (macro): 0.5537 | Val Loss: 1.6059, Val Acc: 0.6367, Val F1 (macro): 0.6171
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 020 | Train Loss: 1.3169, Train Acc: 0.6366, Train F1 (macro): 0.5629 | Val Loss: 1.7744, Val Acc: 0.5586, Val F1 (macro): 0.5548
+Epoch 021 | Train Loss: 1.3112, Train Acc: 0.6366, Train F1 (macro): 0.5657 | Val Loss: 1.6704, Val Acc: 0.6134, Val F1 (macro): 0.5897
+Epoch 022 | Train Loss: 1.3216, Train Acc: 0.6334, Train F1 (macro): 0.5595 | Val Loss: 1.5423, Val Acc: 0.6186, Val F1 (macro): 0.5929
+Epoch 023 | Train Loss: 1.3393, Train Acc: 0.6285, Train F1 (macro): 0.5534 | Val Loss: 1.4475, Val Acc: 0.5895, Val F1 (macro): 0.5700
+Epoch 024 | Train Loss: 1.3680, Train Acc: 0.6199, Train F1 (macro): 0.5455 | Val Loss: 1.3638, Val Acc: 0.6214, Val F1 (macro): 0.6122
+Epoch 025 | Train Loss: 1.3186, Train Acc: 0.6352, Train F1 (macro): 0.5646 | Val Loss: 1.3289, Val Acc: 0.6404, Val F1 (macro): 0.6353
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 026 | Train Loss: 1.3132, Train Acc: 0.6379, Train F1 (macro): 0.5660 | Val Loss: 1.4068, Val Acc: 0.6124, Val F1 (macro): 0.5965
+Epoch 027 | Train Loss: 1.3799, Train Acc: 0.6164, Train F1 (macro): 0.5395 | Val Loss: 1.3652, Val Acc: 0.6276, Val F1 (macro): 0.6095
+Epoch 028 | Train Loss: 1.3407, Train Acc: 0.6269, Train F1 (macro): 0.5527 | Val Loss: 1.3413, Val Acc: 0.6284, Val F1 (macro): 0.6081
+Epoch 029 | Train Loss: 1.3355, Train Acc: 0.6307, Train F1 (macro): 0.5579 | Val Loss: 1.3940, Val Acc: 0.6061, Val F1 (macro): 0.5959
+Epoch 030 | Train Loss: 1.3443, Train Acc: 0.6241, Train F1 (macro): 0.5526 | Val Loss: 1.2667, Val Acc: 0.6529, Val F1 (macro): 0.6398
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/best_model.pt
+Epoch 031 | Train Loss: 1.3549, Train Acc: 0.6232, Train F1 (macro): 0.5506 | Val Loss: 1.3134, Val Acc: 0.6342, Val F1 (macro): 0.5997
+Epoch 032 | Train Loss: 1.3624, Train Acc: 0.6216, Train F1 (macro): 0.5466 | Val Loss: 1.2964, Val Acc: 0.6392, Val F1 (macro): 0.6224
+Epoch 033 | Train Loss: 1.3825, Train Acc: 0.6142, Train F1 (macro): 0.5375 | Val Loss: 1.3020, Val Acc: 0.6397, Val F1 (macro): 0.6195
+Epoch 034 | Train Loss: 1.3791, Train Acc: 0.6161, Train F1 (macro): 0.5410 | Val Loss: 1.3835, Val Acc: 0.6150, Val F1 (macro): 0.5791
+Epoch 035 | Train Loss: 1.3747, Train Acc: 0.6161, Train F1 (macro): 0.5436 | Val Loss: 1.3568, Val Acc: 0.6287, Val F1 (macro): 0.6011
+Epoch 036 | Train Loss: 1.4125, Train Acc: 0.6052, Train F1 (macro): 0.5252 | Val Loss: 1.3882, Val Acc: 0.6283, Val F1 (macro): 0.6026
+Epoch 037 | Train Loss: 1.4621, Train Acc: 0.5908, Train F1 (macro): 0.5081 | Val Loss: 1.4342, Val Acc: 0.5977, Val F1 (macro): 0.5669
+Epoch 038 | Train Loss: 1.4623, Train Acc: 0.5905, Train F1 (macro): 0.5053 | Val Loss: 1.4507, Val Acc: 0.6227, Val F1 (macro): 0.5701
+Epoch 039 | Train Loss: 1.4230, Train Acc: 0.6015, Train F1 (macro): 0.5231 | Val Loss: 1.3384, Val Acc: 0.6297, Val F1 (macro): 0.6057
+Epoch 040 | Train Loss: 1.3759, Train Acc: 0.6169, Train F1 (macro): 0.5430 | Val Loss: 1.3433, Val Acc: 0.6294, Val F1 (macro): 0.6111
+Epoch 041 | Train Loss: 1.3484, Train Acc: 0.6245, Train F1 (macro): 0.5502 | Val Loss: 1.2937, Val Acc: 0.6404, Val F1 (macro): 0.6230
+Epoch 042 | Train Loss: 1.3123, Train Acc: 0.6368, Train F1 (macro): 0.5637 | Val Loss: 1.3566, Val Acc: 0.6411, Val F1 (macro): 0.6246
+Epoch 043 | Train Loss: 1.3104, Train Acc: 0.6364, Train F1 (macro): 0.5624 | Val Loss: 1.4820, Val Acc: 0.6127, Val F1 (macro): 0.6062
+Epoch 044 | Train Loss: 1.3145, Train Acc: 0.6367, Train F1 (macro): 0.5647 | Val Loss: 1.2937, Val Acc: 0.6358, Val F1 (macro): 0.6278
+Epoch 045 | Train Loss: 1.3232, Train Acc: 0.6326, Train F1 (macro): 0.5620 | Val Loss: 1.3898, Val Acc: 0.6283, Val F1 (macro): 0.6188
+Epoch 046 | Train Loss: 1.3080, Train Acc: 0.6367, Train F1 (macro): 0.5668 | Val Loss: 1.4272, Val Acc: 0.6181, Val F1 (macro): 0.6074
+Epoch 047 | Train Loss: 1.3023, Train Acc: 0.6385, Train F1 (macro): 0.5708 | Val Loss: 1.3734, Val Acc: 0.6295, Val F1 (macro): 0.6062
+Epoch 048 | Train Loss: 1.3099, Train Acc: 0.6381, Train F1 (macro): 0.5668 | Val Loss: 1.4053, Val Acc: 0.6326, Val F1 (macro): 0.6018
+
+==========================================
+Training script exited with code: 1
+==========================================
+
+ERROR: Training failed with exit code 1
+
+Final GPU Memory:
+memory.used [MiB], memory.free [MiB]
+0 MiB, 11004 MiB
+
+Completed at: Wed Nov 26 06:23:59 EST 2025
+==========================================
+
+Job information saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp2_top30_deeper_6layers/job_info.txt
+

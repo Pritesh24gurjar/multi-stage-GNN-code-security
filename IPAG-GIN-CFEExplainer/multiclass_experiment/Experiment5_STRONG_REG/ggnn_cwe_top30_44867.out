@@ -1,0 +1,128 @@
+==========================================
+GGNN CWE Top-30 Classification Experiment
+Started at: Tue Nov 25 17:08:06 EST 2025
+SLURM Job ID: 44867
+Node List: classt07
+==========================================
+
+Python version:
+Python 3.11.5
+
+GPU Memory Info (initial):
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+11264 MiB, 0 MiB, 11004 MiB
+
+Using data from:
+  Graphs:   /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  Metadata: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+
+==========================================
+Experiment: exp5_top30_reg_strong
+==========================================
+Experiment 5
+Approximate parameter count: Core GGNN ≈ 0.92M parameters (4·6·192² + readout). Moderate-sized, well under parameter budget.
+Expected behaviour: Increased width + stronger regularization (dropout 0.5, weight decay 5e-5) enhances robustness. Training accuracy may be lower but validation/test generalization stronger. Fairness often improves due to suppression of over-confident patterns.
+
+Model Configuration:
+  Embedding Dim:     64
+  Hidden Dim:        192
+  GGNN Layers:       4
+  Propagation Steps: 4
+  Dropout:           0.5
+
+Training Configuration:
+  Batch Size:        4
+  Epochs:            100
+  Learning Rate:     0.001
+  Weight Decay:      5e-5
+  Num Workers:       4
+  Seed:              46
+
+Data Splits:
+  Train Ratio:       0.8
+  Val Ratio:         0.1
+  Test Ratio:        0.1
+
+Checkpoint directory: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp5_top30_reg_strong
+
+==========================================
+Starting Training
+==========================================
+
+Using device: cuda
+
+Loading processed graphs...
+Loaded 149980 graphs from /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+Loading metadata...
+  vocab_sizes: {'node_type': 5, 'original_type': 223, 'label': 520106}
+  total_samples (metadata): 149980
+  idx_to_cwe entries: 91
+
+Filtering to top 30 CWE classes by frequency...
+Top 30 classes (original indices and counts):
+  CWE_idx 1: 26255 samples
+  CWE_idx 14: 19940 samples
+  CWE_idx 45: 14792 samples
+  CWE_idx 21: 12451 samples
+  CWE_idx 49: 9658 samples
+  CWE_idx 15: 8619 samples
+  CWE_idx 3: 7656 samples
+  CWE_idx 10: 6378 samples
+  CWE_idx 42: 6073 samples
+  CWE_idx 52: 4559 samples
+  CWE_idx 12: 3643 samples
+  CWE_idx 19: 3000 samples
+  CWE_idx 79: 2918 samples
+  CWE_idx 24: 2425 samples
+  CWE_idx 69: 1480 samples
+  CWE_idx 29: 1478 samples
+  CWE_idx 46: 1282 samples
+  CWE_idx 77: 1205 samples
+  CWE_idx 57: 1049 samples
+  CWE_idx 60: 1026 samples
+  CWE_idx 48: 993 samples
+  CWE_idx 22: 930 samples
+  CWE_idx 47: 916 samples
+  CWE_idx 67: 908 samples
+  CWE_idx 80: 877 samples
+  CWE_idx 83: 826 samples
+  CWE_idx 43: 740 samples
+  CWE_idx 11: 723 samples
+  CWE_idx 7: 684 samples
+  CWE_idx 17: 683 samples
+Kept 144167 graphs out of 149980 after top-30 filtering.
+New num_classes (top-30 only): 30
+
+Converting graphs to PyG Data objects...
+Converted 144167 graphs, skipped 0 empty graphs.
+
+Creating stratified train/val/test split...
+Split sizes -> train: 115323, val: 14403, test: 14441
+
+Initializing GGNN model...
+
+Starting training...
+Epoch 001 | Train Loss: 2.8082, Train Acc: 0.1789, Train F1 (macro): 0.0142 | Val Loss: 2.7792, Val Acc: 0.1823, Val F1 (macro): 0.0103
+  --> New best model saved to /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp5_top30_reg_strong/best_model.pt
+Epoch 002 | Train Loss: 2.7883, Train Acc: 0.1818, Train F1 (macro): 0.0112 | Val Loss: 2.7805, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 003 | Train Loss: 2.7857, Train Acc: 0.1817, Train F1 (macro): 0.0110 | Val Loss: 2.7796, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 004 | Train Loss: 2.7848, Train Acc: 0.1820, Train F1 (macro): 0.0105 | Val Loss: 2.7797, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 005 | Train Loss: 2.7834, Train Acc: 0.1820, Train F1 (macro): 0.0103 | Val Loss: 2.7802, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 006 | Train Loss: 2.7826, Train Acc: 0.1820, Train F1 (macro): 0.0103 | Val Loss: 2.7787, Val Acc: 0.1823, Val F1 (macro): 0.0103
+Epoch 007 | Train Loss: 2.7816, Train Acc: 0.1819, Train F1 (macro): 0.0108 | Val Loss: 2.7790, Val Acc: 0.1823, Val F1 (macro): 0.0103
+
+==========================================
+Training script exited with code: 1
+==========================================
+
+ERROR: Training failed with exit code 1
+
+Final GPU Memory:
+memory.used [MiB], memory.free [MiB]
+0 MiB, 11004 MiB
+
+Completed at: Tue Nov 25 19:02:18 EST 2025
+==========================================
+
+Job information saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp5_top30_reg_strong/job_info.txt
+
