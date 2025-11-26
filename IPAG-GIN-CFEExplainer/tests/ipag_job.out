@@ -1,0 +1,1285 @@
+============================================================
+Building ASTs for all code snippets
+============================================================
+Processed 100/1000 snippets...
+Processed 200/1000 snippets...
+Processed 300/1000 snippets...
+Processed 400/1000 snippets...
+Processed 500/1000 snippets...
+Processed 600/1000 snippets...
+Processed 700/1000 snippets...
+Processed 800/1000 snippets...
+Processed 900/1000 snippets...
+Processed 1000/1000 snippets...
+============================================================
+Finished building ASTs
+Successful: 1000, Failed: 0, Total: 1000
+============================================================
+============================================================
+IPAG Construction Complete
+Total snippets: 1000
+Average nodes per snippet: 261.3
+Average edges per snippet: 260.3
+============================================================
+BuildNodeFeaturesAccelerated initialized on device: cuda with batch size: 1280
+Collecting texts from 500 graphs...
+Collected 107885 total nodes. Starting batched encoding...
+  ...encoded 12800/107885 total nodes...
+  ...encoded 25600/107885 total nodes...
+  ...encoded 38400/107885 total nodes...
+  ...encoded 51200/107885 total nodes...
+  ...encoded 64000/107885 total nodes...
+  ...encoded 76800/107885 total nodes...
+  ...encoded 89600/107885 total nodes...
+  ...encoded 102400/107885 total nodes...
+Global embedding map created.
+
+Processing IPAG 1/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 10/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 20/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 30/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 40/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 50/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 60/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 70/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 80/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 90/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 100/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 110/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 120/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 130/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 140/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 150/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 160/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 170/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 180/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 190/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 200/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 210/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 220/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 230/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 240/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 250/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 260/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 270/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 280/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 290/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 300/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 310/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 320/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 330/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 340/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 350/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 360/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 370/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 380/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 390/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 400/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 410/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 420/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 430/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 440/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 450/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 460/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 470/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 480/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 490/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 500/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+
+Batch processing complete. Processed 500 IPAGs.
+Features saved to /mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/processed/batch1.pkl
+============================================================
+Building ASTs for all code snippets
+============================================================
+Processed 100/1000 snippets...
+Processed 200/1000 snippets...
+Processed 300/1000 snippets...
+Processed 400/1000 snippets...
+Processed 500/1000 snippets...
+Processed 600/1000 snippets...
+Processed 700/1000 snippets...
+Processed 800/1000 snippets...
+Processed 900/1000 snippets...
+Processed 1000/1000 snippets...
+============================================================
+Finished building ASTs
+Successful: 1000, Failed: 0, Total: 1000
+============================================================
+============================================================
+IPAG Construction Complete
+Total snippets: 1000
+Average nodes per snippet: 261.3
+Average edges per snippet: 260.3
+============================================================
+BuildNodeFeaturesAccelerated initialized on device: cuda with batch size: 1280
+Collecting texts from 500 graphs...
+Collected 153387 total nodes. Starting batched encoding...
+  ...encoded 12800/153387 total nodes...
+  ...encoded 25600/153387 total nodes...
+  ...encoded 38400/153387 total nodes...
+  ...encoded 51200/153387 total nodes...
+  ...encoded 64000/153387 total nodes...
+  ...encoded 76800/153387 total nodes...
+  ...encoded 89600/153387 total nodes...
+  ...encoded 102400/153387 total nodes...
+  ...encoded 115200/153387 total nodes...
+  ...encoded 128000/153387 total nodes...
+  ...encoded 140800/153387 total nodes...
+  ...encoded 153387/153387 total nodes...
+Global embedding map created.
+
+Processing IPAG 1/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 10/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 20/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 30/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 40/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 50/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 60/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 70/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 80/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 90/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 100/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 110/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 120/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 130/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 140/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 150/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 160/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 170/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 180/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 190/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 200/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 210/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 220/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 230/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 240/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 250/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 260/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 270/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 280/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 290/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 300/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 310/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 320/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 330/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 340/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 350/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 360/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 370/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 380/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 390/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 400/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 410/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 420/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 430/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 440/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 450/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 460/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 470/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 480/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 490/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+Feature combination complete. Feature dimension: 776
+
+Processing IPAG 500/500 (fast features)...
+Feature combination complete. Feature dimension: 776
+
+Batch processing complete. Processed 500 IPAGs.
+Features saved to /mnt/vstor/courses/csds447/sxi219/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/processed/batch0.pkl
+All jobs finished! Features for both GPUs saved.
