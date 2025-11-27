@@ -1,0 +1,80 @@
+==========================================
+GGNN CWE Top-30 Model Analysis & RAI
+Started at: Wed Nov 26 19:41:52 EST 2025
+SLURM Job ID: 45049
+Node List: classt19
+==========================================
+
+Python version:
+Python 3.11.5
+
+GPU Memory Info (initial):
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+11264 MiB, 0 MiB, 11004 MiB
+
+Using data from:
+  Graphs:    /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/processed_graphs_multi_class.pkl
+  Metadata:  /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits/dataset_metadata.pkl
+
+Comparing checkpoints:
+  - /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/exp1_baseline_best_model.pt
+  - /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp6_top30_more_steps/exp6_more_steps_best_model.pt
+  - /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/notebooks/checkpoints/initial_best_model.pt
+
+==========================================
+Analysis Configuration
+==========================================
+  Batch Size:   4
+  Num Workers:  1
+  Seed:         42
+  Device:       cpu
+  Analysis Dir: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/analysis
+
+==========================================
+Starting Analysis
+==========================================
+
+Using device: cpu
+
+Loading processed graphs...
+Loaded 149980 graphs
+Loading metadata...
+
+Filtering to top 30 CWE classes by frequency...
+Kept 144167 graphs after top-30 filtering.
+num_classes (top-30): 30
+Converted 144167 graphs, skipped 0 empty graphs.
+Split sizes -> train: 115323, val: 14403, test: 14441
+
+=== Evaluating checkpoint: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/exp1_baseline_best_model.pt ===
+Test metrics: {'accuracy': 0.7245343327522278, 'macro_precision': 0.7719044089317322, 'macro_recall': 0.6923605799674988, 'macro_f1': 0.7234585285186768, 'loss': 1.0062162833760133}
+RAI disparity: {'f1_min': 0.5454545617103577, 'f1_max': 0.8541666865348816, 'f1_diff': 0.3087121248245239, 'f1_ratio': 1.565972183268185, 'recall_min': 0.43478259444236755, 'recall_max': 0.8369565010070801, 'recall_diff': 0.4021739065647125, 'recall_ratio': 1.9249999711477015}
+
+=== Evaluating checkpoint: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp6_top30_more_steps/exp6_more_steps_best_model.pt ===
+Test metrics: {'accuracy': 0.842393159866333, 'macro_precision': 0.8810341954231262, 'macro_recall': 0.802431046962738, 'macro_f1': 0.8363705277442932, 'loss': 0.5489356923401723}
+RAI disparity: {'f1_min': 0.626086950302124, 'f1_max': 0.9064038991928101, 'f1_diff': 0.28031694889068604, 'f1_ratio': 1.4477284413580767, 'recall_min': 0.52173912525177, 'recall_max': 0.945652186870575, 'recall_diff': 0.42391306161880493, 'recall_ratio': 1.8125000081012548}
+
+=== Evaluating checkpoint: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/notebooks/checkpoints/initial_best_model.pt ===
+Test metrics: {'accuracy': 0.7358908653259277, 'macro_precision': 0.7859880924224854, 'macro_recall': 0.6954329013824463, 'macro_f1': 0.733493447303772, 'loss': 0.9601849426182818}
+RAI disparity: {'f1_min': 0.47524750232696533, 'f1_max': 0.8938547372817993, 'f1_diff': 0.418607234954834, 'f1_ratio': 1.8808193922051224, 'recall_min': 0.3478260934352875, 'recall_max': 0.8695651888847351, 'recall_diff': 0.5217390954494476, 'recall_ratio': 2.4999997996024943}
+
+Combined comparison summary saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/analysis/models_comparison_summary.json
+
+Generating comparison graphs...
+Graphs saved under: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/analysis
+
+==========================================
+Analysis script exited with code: 0
+==========================================
+
+✓ Analysis completed successfully
+
+Final GPU Memory:
+memory.used [MiB], memory.free [MiB]
+0 MiB, 11004 MiB
+
+Completed at: Wed Nov 26 19:52:11 EST 2025
+==========================================
+
+Job information saved to: /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/analysis/analysis_job_45049.txt
+

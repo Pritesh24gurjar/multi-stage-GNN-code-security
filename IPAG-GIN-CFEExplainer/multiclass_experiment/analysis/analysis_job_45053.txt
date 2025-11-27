@@ -1,0 +1,15 @@
+Job Name:         ggnn-cwe-analysis
+Job ID:           45053
+Node:             classt19
+Started:          Wed Nov 26 20:51:38 EST 2025
+Analysis Dir:     /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/analysis
+Exit Code:        0
+Analysis Script:  /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/analyze_models.py
+Data Dir:         /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/data/splits
+Batch Size:       4
+Num Workers:      1
+Device:           cpu
+Checkpoints:
+  - /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp1_top30_baseline/exp1_baseline_best_model.pt
+  - /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/multiclass_experiment/checkpoints/exp6_top30_more_steps/exp6_more_steps_best_model.pt
+  - /home/sxi219/RAI-Account/multi-stage-GNN-code-security/IPAG-GIN-CFEExplainer/notebooks/checkpoints/initial_best_model.pt
