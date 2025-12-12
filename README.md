@@ -1,94 +1,215 @@
-# Multi-Stage Graph Neural Network for Code Security
 
-## Project Overview
-This project presents a comprehensive multi-stage Graph Neural Network (GNN) pipeline designed for advanced code security analysis. The primary objective is to identify, analyze, and mitigate potential security vulnerabilities within software codebases through a structured, data-driven approach. The pipeline integrates various stages, from initial data acquisition and rigorous preprocessing to sophisticated GNN model training and in-depth performance exploration.
 
-## Key Features
-- **Automated Data Gathering**: Efficient scripts for collecting diverse code-related data.
-- **Robust Preprocessing**: Transformation of raw code data into graph-based representations suitable for GNN input.
-- **Modular GNN Architecture**: A flexible and extensible GNN model designed for vulnerability detection.
-- **Optimized Training Framework**: Tools for effective model training, hyperparameter tuning, and performance evaluation.
-- **Insightful Exploration**: Capabilities for analyzing model predictions, understanding vulnerability patterns, and visualizing graph structures.
+# Multi-Stage GNN for Code Vulnerability Detection and CWE Classification
 
-## Project Structure
-The repository is organized into several key components:
+This repository contains the code, experiments, and analysis artifacts for a research
+project on **multiclass software vulnerability classification** using **graph neural
+networks (GNNs)**.  
+The project focuses on **Common Weakness Enumeration (CWE)** classification from C/C++
+source code using **graph-based program representations** and **deep message-passing
+architectures**.
 
-- [`data_gathering.py`](data_gathering.py): Contains scripts responsible for the automated collection and initial preparation of raw code data from various sources.
-- [`preprocessing.py`](preprocessing.py): Implements the logic for transforming raw data into structured graph formats, including node and edge feature engineering, essential for GNN processing.
-- [`model.py`](model.py): Defines the core Graph Neural Network architecture, including layers, aggregation functions, and the overall model design.
-- [`training.py`](training.py): Manages the model training lifecycle, encompassing data loading, loss function definitions, optimizer configurations, and the training/validation loops.
-- [`exploration.py`](exploration.py): Provides utilities and scripts for in-depth analysis of trained models, including performance metrics, error analysis, and visualization of graph embeddings and predictions.
-- [`GNN_pipeline.ipynb`](GNN_pipeline.ipynb): A Jupyter notebook offering an end-to-end demonstration of the entire GNN pipeline, from data loading to model evaluation.
-- [`GNN_V1.ipynb`](GNN_V1.ipynb): An alternative or earlier version of the GNN pipeline, potentially for comparative analysis or historical reference.
-- [`.gitignore`](.gitignore): Specifies files and directories that should be ignored by Git, such as temporary files, build artifacts, and environment-specific configurations.
+The implementation and experiments correspond to the paper:
 
-## Setup and Installation
+> *Multiclass CWE Classification using Inter Procedural Abstract Graphs and
+> Gated Graph Neural Networks*
 
-To set up the project environment and install the necessary dependencies, follow these steps:
+---
 
-1.  **Clone the Repository**:
-    ```bash
-    git clone https://github.com/your-username/multi-stage-GNN-code-security.git
-    cd multi-stage-GNN-code-security
-    ```
+## Overview
 
-2.  **Create a Virtual Environment (Recommended)**:
-    ```bash
-    python -m venv venv
-    # On Windows
-    .\venv\Scripts\activate
-    # On macOS/Linux
-    source venv/bin/activate
-    ```
+Modern vulnerability detection systems increasingly rely on machine learning, yet most
+prior work focuses on **binary vulnerability detection**.  
+This project addresses the more challenging problem of **multiclass CWE classification**
+by:
+- Representing source code as **Inter Procedural Abstract Graphs (IPAGs)**
+- Training **Gated Graph Neural Networks (GGNNs)** with varying message-passing depth
+- Analyzing **class-level performance and disparity** across CWE categories
 
-3.  **Install Dependencies**:
-    Install the required Python packages using pip:
-    ```bash
-    pip install -r requirements.txt
-    ```
+Experiments are conducted on the **BigVul dataset** and evaluated over the **top-30 most
+frequent CWE classes**.
 
-## Usage
+---
 
-Detailed instructions for running the various components of the pipeline:
+## Repository Structure
 
-### 1. Data Gathering
-Execute the `data_gathering.py` script to collect and initial process your raw code data:
+- **multi-stage-GNN-code-security/**
+  - `README.md` — Project documentation
+  - `requirements.txt` — Python dependencies
+  - `data_gathering.py` — Dataset collection and filtering
+  - `exploration.py` — Exploratory data analysis
+  - `model.py` — High-level model definitions
+  - `GNN_pipeline.ipynb` — End-to-end experiment pipeline
+  - **CAG/** — Compact / abstract graph utilities
+    - `datautils/` — Dataset and class utilities
+    - `utils/` — Graph construction helpers
+  - **IPAG-GIN-CFEExplainer/** — Main experimental workspace
+    - `multiclass_experiment/` — GGNN multiclass experiments
+    - `notebooks/` — Preprocessing and analysis notebooks
+    - `outputs/` — Logs and experiment outputs
+    - `scripts/` — SLURM jobs and training pipelines
+    - `src/ipag_gin/` — Core graph and model implementations
+    - `tests/` — Unit tests
+
+
+
+
+---
+
+## Graph Representation
+
+Each C/C++ function is transformed into an **Inter Procedural Abstract Graph
+(IPAG)** that captures:
+- Abstract Syntax Tree (AST) structure
+- Sequential statement ordering
+- Control-related dependencies
+
+Nodes are categorized into semantic types:
+- `TOKEN`
+- `DECLARATION`
+- `PROPERTY`
+
+Graphs are constructed using a multi-stage pipeline that includes vocabulary building,
+feature extraction, and graph serialization.
+
+---
+
+## Models
+
+The repository implements multiple graph neural architectures, including:
+- **GGNN** (primary model used in the paper)
+- GCN
+- GAT
+- GraphSAGE
+- GIN
+
+The main focus is on **GGNNs with varying propagation depth**, allowing systematic analysis
+of how long-range message passing affects CWE classification performance and robustness.
+
+---
+
+## Experiments
+
+Experiments are organized as **isolated configurations** to ensure fair comparison:
+- Baseline GGNN
+- Deeper GGNN (more propagation steps)
+- Narrow / wide variants
+- Strong regularization settings
+
+All large-scale experiments are executed using **SLURM** on GPU-enabled HPC clusters.
+Each run logs:
+- Configuration files
+- Training history
+- Validation metrics
+- Test-set results
+- Class-level disparity analysis
+
+---
+
+## Data
+
+This project uses the **BigVul dataset** (not included in the repository).
+
+You must obtain the dataset separately:
+- https://github.com/ZeoVan/MSR_20_Code_Vulnerability_CSV_Dataset
+
+Preprocessing scripts assume function-level inputs with associated CWE labels.
+
+---
+
+## Setup
+
+### Requirements
+- Python ≥ 3.9
+- PyTorch
+- PyTorch Geometric
+- CUDA (for GPU training)
+- SLURM (optional, for cluster execution)
+
+Install dependencies:
 ```bash
-python data_gathering.py --config_path configs/data_config.yaml
-```
-*(Adjust `--config_path` as necessary for your data sources.)*
+pip install -r requirements.txt
+````
 
-### 2. Preprocessing
-After data gathering, preprocess the raw data into graph format using `preprocessing.py`:
+---
+
+## Running Experiments
+
+### Data Preprocessing
+
 ```bash
-python preprocessing.py --input_data_path raw_data/ --output_graph_path processed_graphs/
+python scripts/batch_data_preprocessing_multiclass.py
 ```
 
-### 3. Model Training
-Train the GNN model using the preprocessed graphs:
+### Training a GGNN Model
+
 ```bash
-python training.py --graph_data_path processed_graphs/ --model_output_path trained_models/
+python scripts/trainer_multiclass_cache_clearing.py \
+  --config configs/ggnn_top30.json
 ```
 
-### 4. Model Exploration
-Analyze the performance and insights from the trained model:
+### SLURM Execution
+
+Example:
+
 ```bash
-python exploration.py --model_path trained_models/latest_model.pt --test_data_path test_graphs/
+sbatch scripts/run_ggnn_cwe_exp.slurm
 ```
 
-### 5. Jupyter Notebooks
-Explore the end-to-end pipeline or specific versions using the provided Jupyter notebooks:
-```bash
-jupyter notebook GNN_pipeline.ipynb
-# or
-jupyter notebook GNN_V1.ipynb
+---
+
+## Reproducibility
+
+* All experiments are configuration-driven
+* SLURM job files specify exact resource requirements
+* Logs, metrics, and outputs are preserved in structured formats
+* Unit tests validate key graph construction components
+
+The branch used for the paper:
+
+```
+feature-v1
 ```
 
-## Contributing
-We welcome contributions to this project. Please refer to our `CONTRIBUTING.md` (if available) for guidelines on how to submit pull requests, report bugs, and suggest new features.
+---
+
+## Artifact and Research Use
+
+This repository is intended to support:
+
+* Multiclass vulnerability detection research
+* Graph-based program analysis
+* CWE-specific performance analysis
+* Robustness and disparity studies in ML-for-code
+
+Researchers are encouraged to reuse individual components (graph construction, model
+definitions, analysis scripts) independently.
+
+---
+
+## Citation
+
+If you use this code or build upon this work, please cite the associated paper:
+
+```bibtex
+@article{yourpaper2025,
+  title   = {Multiclass CWE Classification using Inter Procedural Abstract Graphs},
+  author  = {Sri Immani},
+  year    = {2025}
+}
+```
+
+---
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+This project is released under the MIT License unless otherwise specified in submodules.
+
+---
 
 ## Contact
-For any inquiries or support, please open an issue on the GitHub repository.
+
+For questions or issues related to the research code, please open a GitHub issue or
+contact the repository maintainer.
+
+
